@@ -148,8 +148,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-04-02 23:05" pubdate>
-        April 2, 2021 pm
+      <time datetime="2021-04-10 11:20" pubdate>
+        April 10, 2021 am
       </time>
     </span>
   
@@ -160,7 +160,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      308 字
+      1.1k 字
     </span>
   
 
@@ -170,7 +170,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4
+      12
        分钟
     </span>
   
@@ -206,15 +206,78 @@
               <p><em><strong>不定期更新</strong></em></p>
 <span id="more"></span>
 
-<h2 id="JAVA设计模式"><a href="#JAVA设计模式" class="headerlink" title="JAVA设计模式"></a>JAVA设计模式</h2><p><strong>设计模式七大原则</strong></p>
+<h3 id="设计模式的目的"><a href="#设计模式的目的" class="headerlink" title="设计模式的目的"></a><strong>设计模式的目的</strong></h3><p>代码重用性    ➡相同功能的代码，不用多次编写</p>
+<p>可读性            ➡编程规范性，便于其他人阅读和理解</p>
+<p>可扩展性        ➡增加新功能时，非常方便，称为可维护性</p>
+<p>可靠性            ➡增加新的功能后，对原来的功能没有影响</p>
+<p>使程序呈现高内聚、低耦合</p>
+<h3 id="设计模式七大原则"><a href="#设计模式七大原则" class="headerlink" title="设计模式七大原则"></a><strong>设计模式七大原则</strong></h3><ol>
+<li><p>单一职责原则</p>
+<blockquote>
+<p>对类来说，即一个类应该只负责一项职责。比如类A负责两个不同的职责，当职责1的需求变更而改变类A时，可能会造成职责2执行的错误，所以需要将职责1的粒度分解为A1,A2。</p>
+<p>原则、注意事项和细节:</p>
+<ul>
+<li><p>降低类的复杂度，一个类只负责一项职责</p>
+</li>
+<li><p>提高类的可读性，可维护性</p>
+</li>
+<li><p>降低变更引起的风险</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//举例：不同的交通工具运行方式</span><br>汽车在公路运行，飞机在空中运行，轮船在水中运行<br><span class="hljs-comment">//代码实现设计原理:</span><br>    设计一个运行方式类，定义三种运行方式方法<br>    创建运行方式类对象，用不同的交通工具调用对应的运行方式即可<br></code></pre></td></tr></table></figure></blockquote>
+</li>
+<li><p>接口隔离原则</p>
+<blockquote>
+<p>客户端不应该依赖它不需要的接口，即一个类对另一个类的依赖应该建立在最小的接口上</p>
+</blockquote>
+</li>
+<li><p>依赖倒转原则</p>
+<blockquote>
+<p>高层模块不应该依赖底层模块，二者应该依赖其抽象</p>
+<p>抽象不应该依赖细节，细节应该依赖接口编程</p>
+<p>依赖倒转的中心思想是面向接口编程</p>
+<p>依赖关系传递三种方式：</p>
 <ol>
-<li>单一职责原则</li>
-<li>接口隔离原则</li>
-<li>依赖倒转原则</li>
-<li>里氏替换原则</li>
-<li>开闭原则ocp</li>
-<li>迪米特原则</li>
-<li>合成复用原则</li>
+<li>接口传递</li>
+<li>构造方法转递</li>
+<li>setter方式传递</li>
+</ol>
+<p>注意事项和细节:</p>
+<p>底层模块尽量都要有抽象类或接口</p>
+<p>变量的声明类型尽量是抽象类或接口</p>
+<p>继承时遵循里氏替换原则</p>
+</blockquote>
+</li>
+<li><p>里氏替换原则</p>
+<blockquote>
+<p>使用继承时，遵循里氏替换原则，在子类中尽量不要重写父类的方法</p>
+</blockquote>
+</li>
+<li><p>开闭原则ocp</p>
+<blockquote>
+<p>是编程中最基础、最重要的设计原则</p>
+<p>一个软件实体如类，模块和函数应该对扩展开放(对提供方)，对修改关闭(对使用方).用抽象构建框架，用实现扩展细节。</p>
+<p>当软件需要变化时，尽量通过扩展软件实体的行为来实现变化，而不是通过修改已有的代码来实现变化。</p>
+</blockquote>
+</li>
+<li><p>迪米特原则(最少知道原则)</p>
+<blockquote>
+<p>降低类之间的耦合，但并不是要求完全没有依赖关系</p>
+<p>一个类所实现的功能尽可能封装在该类中</p>
+<p>直接朋友:两个对象之间有耦合关系，就称为朋友关系。其中成员变量、方法参数、方法返回值中的类称为直接的朋友，而在局部变量中的类不是直接的朋友。陌生的类最好不要以局部变量的形式出现在类的内部。</p>
+</blockquote>
+</li>
+<li><p>合成复用原则</p>
+<blockquote>
+<p>尽量使用合成/聚合方式，而不是使用继承</p>
+<p>核心思想：</p>
+<ul>
+<li>找出应用中可能需要变化之处，把他们独立出来，不要和那些不需要变化的代码混在一起</li>
+<li>针对接口编程，而不是针对实现编程</li>
+<li>为了和交互对象之间的松耦合设计而努力</li>
+</ul>
+</blockquote>
+</li>
 </ol>
 <h3 id="单例设计模式"><a href="#单例设计模式" class="headerlink" title="单例设计模式"></a>单例设计模式</h3><p><em><strong>采用一定的方法保证在整个软件系统中，对某个类只能存在一个对象实例</strong></em></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><code class="hljs java"><br><span class="hljs-comment">/**</span><br><span class="hljs-comment">	饿汉式：</span><br><span class="hljs-comment">    	坏处:对象加载时间长</span><br><span class="hljs-comment">    	好处:线程安全</span><br><span class="hljs-comment">	懒汉式:</span><br><span class="hljs-comment">		好处:延迟对象的创建</span><br><span class="hljs-comment">		坏处:线程不安全(多线程可改安全问题)</span><br><span class="hljs-comment">*/</span><br><br><br><span class="hljs-comment">//饿汉式单例模式</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SingletonTest</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        Eat e1=Eat.gete();<br>    &#125;<br>&#125;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Eat</span></span>&#123;<br><br>    <span class="hljs-comment">//私有化类构造器</span><br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Eat</span><span class="hljs-params">()</span></span>&#123;<br><br>    &#125;<br>    <span class="hljs-comment">//创建静态类对象</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Eat e=<span class="hljs-keyword">new</span> Eat();<br><br>    <span class="hljs-comment">//创建公共静态的返回类对象的方法</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Eat <span class="hljs-title">gete</span><span class="hljs-params">()</span></span>&#123;<br>        <span class="hljs-comment">//System.out.println(&quot;111&quot;);</span><br>        <span class="hljs-keyword">return</span> e;<br>    &#125;<br>&#125;<br><br>--------------------------------------------------------<br>    <br><span class="hljs-comment">//懒汉式</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SingletonTest02</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        Sleep s=Sleep.gets();<br>    &#125;<br>&#125;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Sleep</span></span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Sleep</span><span class="hljs-params">()</span></span>&#123;<br><br>    &#125;<br><br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Sleep s=<span class="hljs-keyword">null</span>;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Sleep <span class="hljs-title">gets</span><span class="hljs-params">()</span></span>&#123;<br>        <span class="hljs-keyword">if</span> (s==<span class="hljs-keyword">null</span>)&#123;<br>            s=<span class="hljs-keyword">new</span> Sleep();<br>        &#125;<br>        <span class="hljs-keyword">return</span> s;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -245,9 +308,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/02/Spring/">
+                      <a href="/2021/04/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84and%E7%AE%97%E6%B3%95/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Spring</span>
+                        <span class="hidden-mobile">数据结构and算法</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -255,8 +318,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/02/%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95/">
-                        <span class="hidden-mobile">常用算法</span>
+                      <a href="/2021/04/02/%E7%BB%83%E6%89%8B%E9%A1%B9%E7%9B%AE/">
+                        <span class="hidden-mobile">练习项目</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
