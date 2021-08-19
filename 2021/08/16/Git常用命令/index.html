@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SSM整合, MHY">
+    <meta name="keywords" content="Git常用命令, MHY">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SSM整合 | MHY</title>
+    <title>Git常用命令 | MHY</title>
     <link rel="icon" type="image/jpeg" href="/medias/logo.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -284,12 +284,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/myyyhyyy/blogimg/raw/master/img/ssm.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/myyyhyyy/blogimg/raw/master/img/git.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SSM整合</h1>
+                    <h1 class="description center-align post-title">Git常用命令</h1>
                 </div>
             </div>
         </div>
@@ -405,20 +405,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/SSM/">
-                                <span class="chip bg-color">SSM</span>
-                            </a>
-                        
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">Java</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%A1%86%E6%9E%B6/">
-                                <span class="chip bg-color">框架</span>
-                            </a>
-                        
-                            <a href="/tags/Spring/">
-                                <span class="chip bg-color">Spring</span>
+                            <a href="/tags/Git/">
+                                <span class="chip bg-color">Git</span>
                             </a>
                         
                     </div>
@@ -429,8 +417,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Spring/" class="post-category">
-                                Spring
+                            <a href="/categories/Git/" class="post-category">
+                                Git
                             </a>
                         
                     </div>
@@ -442,7 +430,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-30
+                    2021-08-16
                 </div>
                 
 
@@ -463,10 +451,65 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p> <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/SDxqGu_il3MUCTcN1EYrng">SSM框架整合</a> <span id="more"></span>做一个勤劳的搬运工(实际就是懒)</p>
-<p><strong>解决浏览器乱码问题</strong></p>
-<p>在web.xml文件中配置</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--解决浏览器乱码问题--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">filter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>characterEncodingFilter<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-class</span>&gt;</span>org.springframework.web.filter.CharacterEncodingFilter<span class="tag">&lt;/<span class="name">filter-class</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">init-param</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>encoding<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">init-param</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>forceEncoding<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>true<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">filter-mapping</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>characterEncodingFilter<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/*<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">filter-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
+                <p>一些平时经常使用的命令<span id="more"></span></p>
+<h3 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h3><blockquote>
+<p>git  status</p>
+</blockquote>
+<h3 id="初始化本地库"><a href="#初始化本地库" class="headerlink" title="初始化本地库"></a>初始化本地库</h3><blockquote>
+<p>git init</p>
+</blockquote>
+<p>在本地磁盘下创建一个文件夹，使用git进入该文件夹，使用git init进行初始化，初始化后不要修改生成的文件</p>
+<h3 id="将文件添加到暂存区"><a href="#将文件添加到暂存区" class="headerlink" title="将文件添加到暂存区"></a>将文件添加到暂存区</h3><blockquote>
+<p>git add 文件名</p>
+</blockquote>
+<h3 id="从暂存区删除文件"><a href="#从暂存区删除文件" class="headerlink" title="从暂存区删除文件"></a>从暂存区删除文件</h3><blockquote>
+<p>git rm –cached 文件名</p>
+</blockquote>
+<h3 id="将暂存区文件提交到本地库"><a href="#将暂存区文件提交到本地库" class="headerlink" title="将暂存区文件提交到本地库"></a>将暂存区文件提交到本地库</h3><blockquote>
+<p>git commit -m “说明信息” 文件名</p>
+</blockquote>
+<h3 id="查看版本日志信息"><a href="#查看版本日志信息" class="headerlink" title="查看版本日志信息"></a>查看版本日志信息</h3><blockquote>
+<p>git reflog,简略</p>
+<p>git log,完整信息</p>
+</blockquote>
+<h3 id="版本穿梭-切换版本"><a href="#版本穿梭-切换版本" class="headerlink" title="版本穿梭(切换版本)"></a>版本穿梭(切换版本)</h3><blockquote>
+<p>git reset –hard 版本号</p>
+</blockquote>
+<h3 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h3><blockquote>
+<p>git branch -v</p>
+</blockquote>
+<h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><blockquote>
+<p>git branch 分支名</p>
+</blockquote>
+<h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><blockquote>
+<p>git checkout 分支名</p>
+<p>切换回master git checkout master</p>
+</blockquote>
+<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><blockquote>
+<p>git merge 分支名</p>
+</blockquote>
+<h3 id="冲突合并"><a href="#冲突合并" class="headerlink" title="冲突合并"></a>冲突合并</h3><p>两个分支在同一个文件的同一个位置，有两套不同的修改，git无法决定使用哪一个，必须人为决定</p>
+<p>进入文件，将文件中的《《《《 和====和》》》内容删除，保留想要更改的内容</p>
+<p>然后提交暂存区、提交本地库。提交本地库时，不加文件名，例如 git commit -m “test”</p>
+<h3 id="查看远程库别名"><a href="#查看远程库别名" class="headerlink" title="查看远程库别名"></a>查看远程库别名</h3><blockquote>
+<p>git remote -v</p>
+</blockquote>
+<h3 id="创建远程库别名"><a href="#创建远程库别名" class="headerlink" title="创建远程库别名"></a>创建远程库别名</h3><blockquote>
+<p>git remote add  别名  链接</p>
+<p>别名最好和仓库名相同</p>
+</blockquote>
+<h3 id="推送远程库"><a href="#推送远程库" class="headerlink" title="推送远程库"></a>推送远程库</h3><blockquote>
+<p>git push 别名(或者链接名)  分支名</p>
+</blockquote>
+<h3 id="拉取远程库"><a href="#拉取远程库" class="headerlink" title="拉取远程库"></a>拉取远程库</h3><blockquote>
+<p>git pull 别名(或链接名) 分支名</p>
+</blockquote>
+<h3 id="克隆远程库到本地"><a href="#克隆远程库到本地" class="headerlink" title="克隆远程库到本地"></a>克隆远程库到本地</h3><blockquote>
+<p>git clone 链接</p>
+</blockquote>
+<h3 id="生成ssh免密登录"><a href="#生成ssh免密登录" class="headerlink" title="生成ssh免密登录"></a>生成ssh免密登录</h3><blockquote>
+<p>ssh-keygen -t rsa -C </p>
+</blockquote>
 
                 
             </div>
@@ -493,7 +536,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/07/30/SSM%E6%95%B4%E5%90%88/">http://example.com/2021/07/30/SSM%E6%95%B4%E5%90%88/</a>
+                    <a href="http://example.com/2021/08/16/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">http://example.com/2021/08/16/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -531,20 +574,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/SSM/">
-                                    <span class="chip bg-color">SSM</span>
-                                </a>
-                            
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%A1%86%E6%9E%B6/">
-                                    <span class="chip bg-color">框架</span>
-                                </a>
-                            
-                                <a href="/tags/Spring/">
-                                    <span class="chip bg-color">Spring</span>
+                                <a href="/tags/Git/">
+                                    <span class="chip bg-color">Git</span>
                                 </a>
                             
                         </div>
@@ -714,9 +745,59 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/08/16/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+                    <div class="card-image">
+                        
+                        <img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/git.jpg" class="responsive-img" alt="Git常用命令">
+                        
+                        <span class="card-title">Git常用命令</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一些平时经常使用的命令
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Git/" class="post-category">
+                                    Git
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Git/">
+                        <span class="chip bg-color">Git</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/08/12/SpringBoot/">
                     <div class="card-image">
@@ -733,9 +814,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -761,62 +842,6 @@
                     
                     <a href="/tags/SpringBoot/">
                         <span class="chip bg-color">SpringBoot</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/07/19/MyBatis/">
-                    <div class="card-image">
-                        
-                        <img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/mybatis.jpg" class="responsive-img" alt="MyBatis">
-                        
-                        <span class="card-title">MyBatis</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            扯一下：为什么使用MyBatis
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-19
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/MyBatis/" class="post-category">
-                                    MyBatis
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/SSM/">
-                        <span class="chip bg-color">SSM</span>
-                    </a>
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/MyBatis/">
-                        <span class="chip bg-color">MyBatis</span>
                     </a>
                     
                 </div>

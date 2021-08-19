@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>Git常用命令</title>
+      <link href="/2021/08/16/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+      <url>/2021/08/16/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<p>一些平时经常使用的命令<span id="more"></span></p><h3 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h3><blockquote><p>git  status</p></blockquote><h3 id="初始化本地库"><a href="#初始化本地库" class="headerlink" title="初始化本地库"></a>初始化本地库</h3><blockquote><p>git init</p></blockquote><p>在本地磁盘下创建一个文件夹，使用git进入该文件夹，使用git init进行初始化，初始化后不要修改生成的文件</p><h3 id="将文件添加到暂存区"><a href="#将文件添加到暂存区" class="headerlink" title="将文件添加到暂存区"></a>将文件添加到暂存区</h3><blockquote><p>git add 文件名</p></blockquote><h3 id="从暂存区删除文件"><a href="#从暂存区删除文件" class="headerlink" title="从暂存区删除文件"></a>从暂存区删除文件</h3><blockquote><p>git rm –cached 文件名</p></blockquote><h3 id="将暂存区文件提交到本地库"><a href="#将暂存区文件提交到本地库" class="headerlink" title="将暂存区文件提交到本地库"></a>将暂存区文件提交到本地库</h3><blockquote><p>git commit -m “说明信息” 文件名</p></blockquote><h3 id="查看版本日志信息"><a href="#查看版本日志信息" class="headerlink" title="查看版本日志信息"></a>查看版本日志信息</h3><blockquote><p>git reflog,简略</p><p>git log,完整信息</p></blockquote><h3 id="版本穿梭-切换版本"><a href="#版本穿梭-切换版本" class="headerlink" title="版本穿梭(切换版本)"></a>版本穿梭(切换版本)</h3><blockquote><p>git reset –hard 版本号</p></blockquote><h3 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h3><blockquote><p>git branch -v</p></blockquote><h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><blockquote><p>git branch 分支名</p></blockquote><h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><blockquote><p>git checkout 分支名</p><p>切换回master git checkout master</p></blockquote><h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><blockquote><p>git merge 分支名</p></blockquote><h3 id="冲突合并"><a href="#冲突合并" class="headerlink" title="冲突合并"></a>冲突合并</h3><p>两个分支在同一个文件的同一个位置，有两套不同的修改，git无法决定使用哪一个，必须人为决定</p><p>进入文件，将文件中的《《《《 和====和》》》内容删除，保留想要更改的内容</p><p>然后提交暂存区、提交本地库。提交本地库时，不加文件名，例如 git commit -m “test”</p><h3 id="查看远程库别名"><a href="#查看远程库别名" class="headerlink" title="查看远程库别名"></a>查看远程库别名</h3><blockquote><p>git remote -v</p></blockquote><h3 id="创建远程库别名"><a href="#创建远程库别名" class="headerlink" title="创建远程库别名"></a>创建远程库别名</h3><blockquote><p>git remote add  别名  链接</p><p>别名最好和仓库名相同</p></blockquote><h3 id="推送远程库"><a href="#推送远程库" class="headerlink" title="推送远程库"></a>推送远程库</h3><blockquote><p>git push 别名(或者链接名)  分支名</p></blockquote><h3 id="拉取远程库"><a href="#拉取远程库" class="headerlink" title="拉取远程库"></a>拉取远程库</h3><blockquote><p>git pull 别名(或链接名) 分支名</p></blockquote><h3 id="克隆远程库到本地"><a href="#克隆远程库到本地" class="headerlink" title="克隆远程库到本地"></a>克隆远程库到本地</h3><blockquote><p>git clone 链接</p></blockquote><h3 id="生成ssh免密登录"><a href="#生成ssh免密登录" class="headerlink" title="生成ssh免密登录"></a>生成ssh免密登录</h3><blockquote><p>ssh-keygen -t rsa -C </p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SpringBoot</title>
+      <link href="/2021/08/12/SpringBoot/"/>
+      <url>/2021/08/12/SpringBoot/</url>
+      
+        <content type="html"><![CDATA[<p><strong>08.16，手残误删已经写好的spring boot笔记，无法恢复。</strong></p><p><strong>等有时间在补出来。</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Spring </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 框架 </tag>
+            
+            <tag> Spring </tag>
+            
+            <tag> SpringBoot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SSM整合</title>
       <link href="/2021/07/30/SSM%E6%95%B4%E5%90%88/"/>
       <url>/2021/07/30/SSM%E6%95%B4%E5%90%88/</url>
