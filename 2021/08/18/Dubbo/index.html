@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SSM整合, MHY">
+    <meta name="keywords" content="Dubbo, MHY">
     <meta name="description" content=" ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SSM整合 | MHY</title>
+    <title>Dubbo | MHY</title>
     <link rel="icon" type="image/jpeg" href="/medias/logo.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -284,12 +284,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/myyyhyyy/blogimg/raw/master/img/ssm.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/myyyhyyy/blogimg/raw/master/img/dubbo.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SSM整合</h1>
+                    <h1 class="description center-align post-title">Dubbo</h1>
                 </div>
             </div>
         </div>
@@ -409,16 +409,16 @@
                                 <span class="chip bg-color">Java</span>
                             </a>
                         
-                            <a href="/tags/SSM/">
-                                <span class="chip bg-color">SSM</span>
+                            <a href="/tags/Dubbo/">
+                                <span class="chip bg-color">Dubbo</span>
                             </a>
                         
-                            <a href="/tags/%E6%A1%86%E6%9E%B6/">
-                                <span class="chip bg-color">框架</span>
+                            <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
+                                <span class="chip bg-color">分布式</span>
                             </a>
                         
-                            <a href="/tags/Spring/">
-                                <span class="chip bg-color">Spring</span>
+                            <a href="/tags/RPC/">
+                                <span class="chip bg-color">RPC</span>
                             </a>
                         
                     </div>
@@ -429,8 +429,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Spring/" class="post-category">
-                                Spring
+                            <a href="/categories/RPC%E5%88%86%E5%B8%83%E5%BC%8F%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6/" class="post-category">
+                                RPC分布式服务框架
                             </a>
                         
                     </div>
@@ -442,7 +442,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-30
+                    2021-08-18
                 </div>
                 
 
@@ -463,10 +463,120 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p> <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/SDxqGu_il3MUCTcN1EYrng">SSM框架整合</a> <span id="more"></span>做一个勤劳的搬运工(实际就是懒)</p>
-<p><strong>解决浏览器乱码问题</strong></p>
-<p>在web.xml文件中配置</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--解决浏览器乱码问题--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">filter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>characterEncodingFilter<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-class</span>&gt;</span>org.springframework.web.filter.CharacterEncodingFilter<span class="tag">&lt;/<span class="name">filter-class</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">init-param</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>encoding<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">init-param</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>forceEncoding<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>true<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">filter-mapping</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>characterEncodingFilter<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/*<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">filter-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
+                <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<p><strong>集群：</strong>很多“人”一起做相同的事。一个业务部署在多台服务器上</p>
+<p>**分布式:**很多“人”一起做不相同的事，这些不相同的事合起来是一件大事。一个业务分解成不同的模块，部署在不同的机器上</p>
+<p><strong>Dubbo</strong>是SOA架构时代的产物，SpringCloud是微服务时代产物。对于互联网项目来说，两者都可以选择。</p>
+</blockquote>
+<p>**<a target="_blank" rel="noopener" href="https://dubbo.apache.org/zh/">Dubbo</a>**是阿里巴巴开源的一个高性能、轻量级的Java **RPC(远程服务调用)**框架，后来被Apache收录.</p>
+<p><strong>Dubbo架构图</strong></p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/dubbo%E6%9E%B6%E6%9E%84%E5%9B%BE.jpg"></p>
+<ul>
+<li>首先启动提供者（0）</li>
+<li>然后会将ip端口、链接等放在到注册中心（1）</li>
+<li>顾客想调用服务，会去注册中心发现服务的端口链接等信息（2）</li>
+<li>注册中心在返回给顾客（3）</li>
+<li>最后顾客去调用服务（4）</li>
+<li>调用过程会自动执行。Monitor用来做监控。</li>
+</ul>
+<p><strong>Dubbo</strong>官方推荐使用<strong>ZooKeeper</strong>作为注册中心。</p>
+<p>简单比喻来说，就是将以前写的项目中的service和和controller分离出来，原来写在同一个项目中，现在分别创建两个项目来写service和controller。<br>service作为提供服务者（provider），在application配置文件中，将自己指定到注册中心。<br>controller作为消费者（consumer），也需要在配置文件中指定到注册中心</p>
+<h2 id="Spring-Boot整合Dubbo"><a href="#Spring-Boot整合Dubbo" class="headerlink" title="Spring Boot整合Dubbo"></a>Spring Boot整合Dubbo</h2><ol>
+<li><p>服务提供方和消费方的pom中导入dubbo的spring boot<a target="_blank" rel="noopener" href="https://github.com/apache/dubbo-spring-boot-project/blob/master/README_CN.md">依赖</a></p>
+</li>
+<li><p>提供方在application配置文件中进行注册，然后在需要提供的接口实现类(也就是说要提供的服务)上，使用@Server将这个服务暴露出来</p>
+<blockquote>
+<p> 注意！一定要导入Dubbo的@Server包</p>
+</blockquote>
+</li>
+<li><p>消费方编写controller接收提供方的接口，编写和接口相同的service接口，使用@Reference将接口注入到controller中</p>
+</li>
+<li><p>可以将service和controller中相同的接口抽取出来生成一个新的模块，然后在service和controller的pom文件中导入这个心模块即可</p>
+</li>
+</ol>
+<p><strong>项目结构示例</strong>：</p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/dubbo%E7%BB%93%E6%9E%84.png"></p>
+<p><strong>Provider配置文件：</strong></p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/%E6%8F%90%E4%BE%9B%E8%80%85%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png"></p>
+<p><strong>Consumer配置文件：</strong></p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/%E6%B6%88%E8%B4%B9%E8%80%85%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png"></p>
+<p><strong>想使用Dubbo，要先启用zookeeper和Dubbo的监控中心</strong></p>
+<h2 id="启动时检查"><a href="#启动时检查" class="headerlink" title="启动时检查"></a>启动时检查</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt; dubbo:consumer check=&quot;false | true&quot; / &gt;</span><br></pre></td></tr></table></figure>
+
+<p>在整个服务启动时，注册中心会检查消费方和提供方是否存在于注册中心。默认为true开启自动检查，如果有一方没有在注册中心，比如提供方没有在注册中，启动消费方时，就会报错。<br>将check设置为false，则不会启用自动检查，只有在相互调用时才会启动检查。</p>
+<h2 id="连接超时"><a href="#连接超时" class="headerlink" title="连接超时"></a>连接超时</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt; dubbo: timeout=&quot;3000&quot; / &gt;</span><br></pre></td></tr></table></figure>
+
+<p>默认为1000也就是一秒。通过设置连接超时，可以防止消费方在获取服务时造成线程阻塞。</p>
+<h2 id="重试次数"><a href="#重试次数" class="headerlink" title="重试次数"></a>重试次数</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt; dubbo: timeout=&quot;3000&quot; retires=&quot;3&quot; / &gt;</span><br></pre></td></tr></table></figure>
+
+<p>当第一次调用时失败，会额外在进行3次重新调用。</p>
+<h2 id="多版本"><a href="#多版本" class="headerlink" title="多版本"></a>多版本</h2><p>当添加新功能后，可以让一部分用户使用新功能版本，当新版本功能稳定后，将剩下的老版本全替换为新版本</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dubbo:version=1.00</span><br></pre></td></tr></table></figure>
+
+<h2 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h2><p>当消费者向提供者查询对象数据时，提供者在数据库中查询后，将数据封装发送给消费者，这两个模块之间传输对象就要使用到序列化。<br>Dubbo内部已经封装好序列化，使用时只需要在pojo创建的类实现Serializable接口。</p>
+<blockquote>
+<p>这里创建对象的pojo也是单独的模块，在接口模块pom中导入pojo模块即可使用</p>
+</blockquote>
+<h2 id="地址缓存"><a href="#地址缓存" class="headerlink" title="地址缓存"></a>地址缓存</h2><blockquote>
+<p>面试题：<br>注册中心挂了，还能访问服务么？</p>
+<p>可以，Dubbo消费者第一次调用提供者时，会从注册中心获取地址，将地址缓存到本地，以后访问的时候不会在访问注册中心。<br>如果提供者的地址发生变化，注册中心会通知消费者，消费者的本地缓存也会发生变化</p>
+</blockquote>
+<h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><p><strong>Dubbo提供了四种策略：</strong></p>
+<ol>
+<li>Random。按权重随机，默认权重为100。权重可以设置更改</li>
+<li>RoundRobn。按权重轮询。权重相同，按照1、2、3…这样依次来。权重高，会优先访问</li>
+<li>LeastActive。最少活跃调用数。优先访问速度快的服务提供者。速度相同，则随机</li>
+<li>ConsistenHash。一致性Hash。请求的参数相同，则请求到同一个提供者</li>
+</ol>
+<h2 id="集群容错"><a href="#集群容错" class="headerlink" title="集群容错"></a>集群容错</h2><p>服务提供者提供了三台提供服务器，当消费者调用A台服务器时发生错误时，处理方法如下：</p>
+<p><strong>集群容错模式：</strong></p>
+<ol>
+<li><p>Failover Cluster</p>
+<blockquote>
+<p> 失败重试，默认重试2次。访问A台服务器出错，会去访问B，B出错访问D，这两次全部出错，则报异常.一般用于读操作。使用retries配置</p>
+</blockquote>
+</li>
+<li><p>Failfast Cluster</p>
+<blockquote>
+<p>快速失败。只发起一次调用，失败就报错。用于写操作</p>
+</blockquote>
+</li>
+<li><p>Failsafe Cluster</p>
+<blockquote>
+<p>失败安全，出现异常，直接忽略，返回空结果。用于日志</p>
+</blockquote>
+</li>
+<li><p>Failback Cluster</p>
+<blockquote>
+<p>失败后自动恢复，当请求失败后，会定时自动发请求，直到成功为止。</p>
+</blockquote>
+</li>
+<li><p>Forking Cluster</p>
+<blockquote>
+<p>并行调用多个服务器，只要有一个成功即成功。广撒网，捞到一个就赚。耗性能</p>
+</blockquote>
+</li>
+<li><p>Broadcast Cluster</p>
+<blockquote>
+<p>广播所有提供者，逐个调用，有一个报错则报错</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="服务降级"><a href="#服务降级" class="headerlink" title="服务降级"></a>服务降级</h2><p>比如提供广告、支付、游戏多个服务，服务器性能不够，可以将某个服务降级</p>
+<p><strong>降级方式：</strong></p>
+<ol>
+<li><p>mock=force:return null </p>
+<blockquote>
+<p>消费者调用该方法全部返回null，用来屏蔽不重要的服务，不会发起远程调用</p>
+</blockquote>
+</li>
+<li><p>mock=fail:return null </p>
+<blockquote>
+<p>消费者在调用服务发生错误时，返回null。不抛异常。用来容忍不重要服务 在不稳定的时候也可以调用</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="小结："><a href="#小结：" class="headerlink" title="小结："></a>小结：</h2><p>学这个Dubbo在配置zookeeper时，总是提示一些错误，写好的代码因为这些工具报错没有去测试是否成功，感觉学了个空壳子。<br><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/%E8%9C%A1%E7%AC%94%E5%B0%8F%E6%96%B0.jpg"></p>
 
                 
             </div>
@@ -493,7 +603,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/07/30/SSM%E6%95%B4%E5%90%88/">http://example.com/2021/07/30/SSM%E6%95%B4%E5%90%88/</a>
+                    <a href="http://example.com/2021/08/18/Dubbo/">http://example.com/2021/08/18/Dubbo/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -535,16 +645,16 @@
                                     <span class="chip bg-color">Java</span>
                                 </a>
                             
-                                <a href="/tags/SSM/">
-                                    <span class="chip bg-color">SSM</span>
+                                <a href="/tags/Dubbo/">
+                                    <span class="chip bg-color">Dubbo</span>
                                 </a>
                             
-                                <a href="/tags/%E6%A1%86%E6%9E%B6/">
-                                    <span class="chip bg-color">框架</span>
+                                <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
+                                    <span class="chip bg-color">分布式</span>
                                 </a>
                             
-                                <a href="/tags/Spring/">
-                                    <span class="chip bg-color">Spring</span>
+                                <a href="/tags/RPC/">
+                                    <span class="chip bg-color">RPC</span>
                                 </a>
                             
                         </div>
@@ -714,16 +824,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/08/12/SpringBoot/">
+                <a href="/2021/08/18/Dubbo/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/springboot.jpg" class="responsive-img" alt="SpringBoot">
+                        <img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/dubbo.webp" class="responsive-img" alt="Dubbo">
                         
-                        <span class="card-title">SpringBoot</span>
+                        <span class="card-title">Dubbo</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -733,34 +844,39 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Spring/" class="post-category">
-                                    Spring
+                            <a href="/categories/RPC%E5%88%86%E5%B8%83%E5%BC%8F%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6/" class="post-category">
+                                    RPC分布式服务框架
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%A1%86%E6%9E%B6/">
-                        <span class="chip bg-color">框架</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/Spring/">
-                        <span class="chip bg-color">Spring</span>
+                    <a href="/tags/Dubbo/">
+                        <span class="chip bg-color">Dubbo</span>
                     </a>
                     
-                    <a href="/tags/SpringBoot/">
-                        <span class="chip bg-color">SpringBoot</span>
+                    <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
+                        <span class="chip bg-color">分布式</span>
+                    </a>
+                    
+                    <a href="/tags/RPC/">
+                        <span class="chip bg-color">RPC</span>
                     </a>
                     
                 </div>
@@ -774,30 +890,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/19/MyBatis/">
+                <a href="/2021/08/16/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/mybatis.jpg" class="responsive-img" alt="MyBatis">
+                        <img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/git.jpg" class="responsive-img" alt="Git常用命令">
                         
-                        <span class="card-title">MyBatis</span>
+                        <span class="card-title">Git常用命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            扯一下：为什么使用MyBatis
+                            一些平时经常使用的命令
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-16
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/MyBatis/" class="post-category">
-                                    MyBatis
+                            <a href="/categories/Git/" class="post-category">
+                                    Git
                                 </a>
                             
                             
@@ -807,16 +923,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/SSM/">
-                        <span class="chip bg-color">SSM</span>
-                    </a>
-                    
-                    <a href="/tags/MyBatis/">
-                        <span class="chip bg-color">MyBatis</span>
+                    <a href="/tags/Git/">
+                        <span class="chip bg-color">Git</span>
                     </a>
                     
                 </div>
