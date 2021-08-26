@@ -1,0 +1,1578 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Spring Cloud, MHY">
+    <meta name="description" content=" ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Spring Cloud | MHY</title>
+    <link rel="icon" type="image/jpeg" href="/medias/logo.jpg">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <span class="logo-span">MHY</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <div class="logo-name">MHY</div>
+        <div class="logo-desc">
+            
+             
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/haoyuancode/haoyuancode.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/haoyuancode/haoyuancode.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/myyyhyyy/blogimg/raw/master/img/sprincloud.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Spring Cloud</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                            <a href="/tags/Spring/">
+                                <span class="chip bg-color">Spring</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
+                                <span class="chip bg-color">分布式</span>
+                            </a>
+                        
+                            <a href="/tags/Spring-Cloud/">
+                                <span class="chip bg-color">Spring Cloud</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
+                                <span class="chip bg-color">微服务</span>
+                            </a>
+                        
+                            <a href="/tags/Ribbon/">
+                                <span class="chip bg-color">Ribbon</span>
+                            </a>
+                        
+                            <a href="/tags/Nacos/">
+                                <span class="chip bg-color">Nacos</span>
+                            </a>
+                        
+                            <a href="/tags/Feign/">
+                                <span class="chip bg-color">Feign</span>
+                            </a>
+                        
+                            <a href="/tags/GateWay/">
+                                <span class="chip bg-color">GateWay</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" class="post-category">
+                                微服务
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-08-23
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="认识微服务"><a href="#认识微服务" class="headerlink" title="认识微服务"></a>认识微服务</h2><span id="more"></span>
+
+<p><strong>Spring Cloud 只是微服务里面的一个技术</strong></p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%8A%80%E6%9C%AF%E6%A0%88.png"></p>
+<p><strong>微服务就是一种经过良好架构设计的分布式架构方案，分布式的特征：</strong></p>
+<ul>
+<li><p>单一职责</p>
+<blockquote>
+<p>业务拆分粒度更小，避免业务重复开发</p>
+</blockquote>
+</li>
+<li><p>面向服务</p>
+<blockquote>
+<p>对外暴露业务接口，等着来调用</p>
+</blockquote>
+</li>
+<li><p>自治</p>
+<blockquote>
+<p>一个业务划分成多个团队，每个团队负责一个小的功能模块，每个团队独立，技术独立、数据库也是独立，部署也独立</p>
+</blockquote>
+</li>
+<li><p>隔离性强</p>
+<blockquote>
+<p>服务调用做好隔离、降级等，避免出现级联问题</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>Spring Cloud和Dubbo的区别</strong></p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/springcloud%E5%92%8Cdubboqubie.jpg"></p>
+<p><strong>Dubbo使用RPC进行远程调用，而Spring Cloud使用HTTP进行调用</strong></p>
+<h2 id="如何使用Spring-Cloud"><a href="#如何使用Spring-Cloud" class="headerlink" title="如何使用Spring Cloud"></a>如何使用Spring Cloud</h2><ol>
+<li><p>导入spring cloud依赖</p>
+</li>
+<li><p>导入spring boot依赖</p>
+<blockquote>
+<p>spring cloud依赖于spring boot</p>
+</blockquote>
+</li>
+</ol>
+<p><strong>看起来导入配置就可使用，要注意Spring Cloud是需要配合其他组件一起使用</strong></p>
+<h2 id="Spring-Cloud通过Http方式进行远程调用"><a href="#Spring-Cloud通过Http方式进行远程调用" class="headerlink" title="Spring Cloud通过Http方式进行远程调用"></a>Spring Cloud通过Http方式进行远程调用</h2><p><strong>模拟场景</strong></p>
+<blockquote>
+<p>有一个根据用户id查询用户信息的user-service模块，和根据订单号查询订单的order-service模块。<br>现在添加一个功能，根据订单号查询订单的同时也要查询出用户的信息。（订单类中包含有user属性）</p>
+</blockquote>
+<p><strong>实现思路</strong>：</p>
+<ol>
+<li><p>在order-service配置文件中注册<strong>RestTemplate</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function">publci RestTemplate <span class="title">restTemplate</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> RestTemplate();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>在Service中使用自动注入RestTemplate对象，使用RestTemplate.get…()或者RestTemplate.post…()来实现</p>
+<blockquote>
+<p>使用RestTemplate.get…()或者RestTemplate.post…()方法，要给定一个url和bean对象</p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@AutoWire</span></span><br><span class="line"><span class="keyword">private</span> RestTemplate restTemplate;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> Order <span class="title">queryOrderById</span><span class="params">(Long orderId)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 1.查询订单</span></span><br><span class="line">    Order order = orderMapper.findById(orderId);</span><br><span class="line">    <span class="comment">// 2.利用RestTemplate发起http请求，查询用户</span></span><br><span class="line">    <span class="comment">// 2.1.url路径</span></span><br><span class="line">    String url = <span class="string">&quot;http://userservice/user/&quot;</span> + order.getUserId();</span><br><span class="line">    <span class="comment">// 2.2.发送http请求，实现远程调用</span></span><br><span class="line">    User user = restTemplate.getForObject(url, User.class);</span><br><span class="line">    <span class="comment">// 3.封装user到Order</span></span><br><span class="line">    order.setUser(user);</span><br><span class="line">    <span class="comment">// 4.返回</span></span><br><span class="line">    <span class="keyword">return</span> order;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Feign"><a href="#Feign" class="headerlink" title="Feign"></a>Feign</h2><p>Feign是一个声明式的http客户端，解决上边提到的使用RestTemplate发送请求url时一些代码问题。比如可读性差，参数复杂等，帮助我们优雅的实现http请求的发送。用来代替RestTemplate</p>
+<p>而且<strong>Feign集成Ribbon，自动实现负载均衡</strong></p>
+<h3 id="如何使用Feign"><a href="#如何使用Feign" class="headerlink" title="如何使用Feign"></a>如何使用Feign</h3><ol>
+<li> 在客户端引入依赖</li>
+</ol>
+   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--feign客户端依赖--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-cloud-starter-openfeign&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>客户端启动类添加注解开启Feign</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@EnableFeignClients</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OrderApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(OrderApplication.class, args);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>编写Feign客户端</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个接口，定义方法</span></span><br><span class="line"><span class="meta">@FeignClient(value = &quot;userservice&quot;)</span> <span class="comment">//括号内是要访问的服务名</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserClient</span> </span>&#123;    </span><br><span class="line">    <span class="meta">@GetMapping(&quot;/user/&#123;id&#125;&quot;)</span> <span class="comment">//发送方式还是Get，如果参数有多个，直接加&#123;&#125;</span></span><br><span class="line">    <span class="function">User <span class="title">findById</span><span class="params">(<span class="meta">@PathVariable(&quot;id&quot;)</span> Long id)</span></span>;  <span class="comment">//参数对应上面</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//调用时</span></span><br><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> OrderMapper orderMapper;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> UserClient userClient;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> Order <span class="title">queryOrderById</span><span class="params">(Long orderId)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 1.查询订单</span></span><br><span class="line">    Order order = orderMapper.findById(orderId);</span><br><span class="line">    <span class="comment">// 2.用Feign远程调用</span></span><br><span class="line">    User user = userClient.findById(order.getUserId());</span><br><span class="line">    <span class="comment">// 3.封装user到Order</span></span><br><span class="line">    order.setUser(user);</span><br><span class="line">    <span class="comment">// 4.返回</span></span><br><span class="line">    <span class="keyword">return</span> order;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//对比之前写法</span></span><br><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> OrderMapper orderMapper;</span><br><span class="line"></span><br><span class="line"><span class="meta">@AutoWire</span></span><br><span class="line"><span class="keyword">private</span> RestTemplate restTemplate;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> Order <span class="title">queryOrderById</span><span class="params">(Long orderId)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 1.查询订单</span></span><br><span class="line">    Order order = orderMapper.findById(orderId);</span><br><span class="line">    <span class="comment">// 2.利用RestTemplate发起http请求，查询用户</span></span><br><span class="line">    <span class="comment">// 2.1.url路径</span></span><br><span class="line">    String url = <span class="string">&quot;http://userservice/user/&quot;</span> + order.getUserId();</span><br><span class="line">    <span class="comment">// 2.2.发送http请求，实现远程调用</span></span><br><span class="line">    User user = restTemplate.getForObject(url, User.class);</span><br><span class="line">    <span class="comment">// 3.封装user到Order</span></span><br><span class="line">    order.setUser(user);</span><br><span class="line">    <span class="comment">// 4.返回</span></span><br><span class="line">    <span class="keyword">return</span> order;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//优雅么？写法确实更简单了</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="自定义Feign配置"><a href="#自定义Feign配置" class="headerlink" title="自定义Feign配置"></a>自定义Feign配置</h3><p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/Feign%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E5%B1%9E%E6%80%A7.PNG" alt="img"></p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/Feign%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F%E4%B8%80.PNG" alt="img"></p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/Feign%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F%E4%BA%8C.PNG" alt="img"></p>
+<h3 id="Feign性能优化"><a href="#Feign性能优化" class="headerlink" title="Feign性能优化"></a>Feign性能优化</h3><p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/Feign%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.PNG" alt="img"></p>
+<p><strong>因为Feign底层使用URLConnection，所以可以替换成Apache HttpClient或者OKHttp，演示使用Apache HttpClient</strong></p>
+<blockquote>
+<p>注意：</p>
+<p>是在客户端引入依赖和配置这些属性</p>
+</blockquote>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/Feign%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E4%BD%BF%E7%94%A8HttpClient.PNG" alt="img"></p>
+<p><strong>Feign性能优化总结:</strong></p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/Feign%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%80%BB%E7%BB%93.PNG" alt="img"></p>
+<h3 id="实际开发中Feign的应用"><a href="#实际开发中Feign的应用" class="headerlink" title="实际开发中Feign的应用"></a>实际开发中Feign的应用</h3><p>两种方式：</p>
+<ol>
+<li><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/Feign%E5%AE%9E%E9%99%85%E5%BC%80%E5%8F%91%E5%BA%94%E7%94%A81.PNG" alt="img"></li>
+<li><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/Feign%E5%AE%9E%E9%99%85%E5%BC%80%E5%8F%91%E5%BA%94%E7%94%A82.PNG" alt="img"></li>
+</ol>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/Feign%E5%AE%9E%E9%99%85%E5%BC%80%E5%8F%91%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.PNG" alt="img"></p>
+<h2 id="Eureka"><a href="#Eureka" class="headerlink" title="Eureka"></a>Eureka</h2><h3 id="什么是Eureka"><a href="#什么是Eureka" class="headerlink" title="什么是Eureka"></a>什么是Eureka</h3><p>Eureka是Spring Cloud的注册中心，就像Dubbo的Zookeeper。<br>服务提供者和消费者都被eureka称为client，<strong>服务提供者会每隔30秒会像eureka发送“心跳续约”，而消费者也会更新本地的服务列表缓存</strong>确保消费者进行远程调用时能够调用到服务。而且消费者会根据负载均衡算法，从服务列表里面挑选。</p>
+<h3 id="如何创建Eureka"><a href="#如何创建Eureka" class="headerlink" title="如何创建Eureka"></a>如何创建Eureka</h3><ol>
+<li><p>创建一个Eureka模块</p>
+</li>
+<li><p>引入Eureka依赖</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-server&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>写eureka类,使用@EnableEurekaServer注解</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@EnableEurekaServer</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EurekaApplication</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(EurekaApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>在配置文件中配置Eureka</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">10086</span> <span class="comment"># 服务端口</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">eurekaserver</span> <span class="comment"># eureka的服务名称</span></span><br><span class="line"><span class="attr">eureka:</span></span><br><span class="line">  <span class="attr">client:</span></span><br><span class="line">    <span class="attr">service-url:</span>  <span class="comment"># eureka的地址信息</span></span><br><span class="line">      <span class="attr">defaultZone:</span> <span class="string">http://127.0.0.1:10086/eureka</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="服务注册"><a href="#服务注册" class="headerlink" title="服务注册"></a>服务注册</h3><p>例如 将userService模块中引入eureka，并注册到注册中心</p>
+<ol>
+<li><p>引入eureka依赖</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--eureka客户端依赖--&gt;</span><br><span class="line">        &lt;!--&lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-client&lt;/artifactId&gt;</span><br><span class="line"> 	&lt;/dependency&gt;--&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>在配置文件中配置eureka地址</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Spring:</span></span><br><span class="line"> <span class="attr">application:</span></span><br><span class="line"> 	<span class="attr">name:</span> <span class="string">userService</span>  <span class="comment"># user服务名称</span></span><br><span class="line"><span class="attr">eureka:</span></span><br><span class="line"> <span class="attr">client:</span></span><br><span class="line">   <span class="attr">service-url:</span>  <span class="comment"># eureka的地址信息</span></span><br><span class="line">      <span class="attr">defaultZone:</span> <span class="string">http://127.0.0.1:10086/eureka</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="服务发现"><a href="#服务发现" class="headerlink" title="服务发现"></a>服务发现</h3><p>例如 将orderService模块中引入eureka,调用userService</p>
+<p>在<strong>服务注册</strong>的基础上做以下几步</p>
+<ul>
+<li><p>在创建的<strong>RestTemplate</strong>类上加入@LoadBalanced注解</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line">    <span class="meta">@LoadBalanced</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> RestTemplate <span class="title">restTemplate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> RestTemplate();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>将url修改为服务注册时配置的名字</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#在userService配置文件中，配置的Eureka名字是 userservice，因此在进行http调用时，使用该名字即可</span><br><span class="line">    String url = <span class="string">&quot;http://userservice/user/&quot;</span> + order.getUserId();</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Ribbon负载均衡"><a href="#Ribbon负载均衡" class="headerlink" title="Ribbon负载均衡"></a>Ribbon负载均衡</h2><h3 id="Ribbon是什么"><a href="#Ribbon是什么" class="headerlink" title="Ribbon是什么"></a>Ribbon是什么</h3><p>Ribbon是<strong>Nexflix Ribbon</strong>实现的一套<strong>客户端负载均衡工具</strong></p>
+<h3 id="Ribbon负载均衡原理"><a href="#Ribbon负载均衡原理" class="headerlink" title="Ribbon负载均衡原理"></a>Ribbon负载均衡原理</h3><p>通过源码得出下面结论和图片：</p>
+<blockquote>
+<p> 当客户端发起请求后，请求就会被Ribbon拦截，首先获取请求中的url，然后去Eureka查找服务并返回服务列表，经过负载均衡后选择服务列表中的某个服务，最后修改url，发起请求</p>
+</blockquote>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/Ribbon.PNG"></p>
+<p><em><strong>负载均衡规则都是由IRule决定</strong></em></p>
+<h3 id="Ribbon负载均衡策略"><a href="#Ribbon负载均衡策略" class="headerlink" title="Ribbon负载均衡策略"></a>Ribbon负载均衡策略</h3><p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/Ribbon%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%AD%96%E7%95%A5.PNG" alt="img"></p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%AD%96%E7%95%A5.PNG" alt="img"></p>
+<p>负载均衡<strong>默认使用轮询规则</strong></p>
+<h3 id="改变负载均衡规则"><a href="#改变负载均衡规则" class="headerlink" title="改变负载均衡规则"></a>改变负载均衡规则</h3><ol>
+<li><p>在消费者的application类中，或者自定义一个配置类，定义一个新的IRule</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> IRule <span class="title">randomRule</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> RandomRule();<span class="comment">//new 一个想使用的规则即可</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>使用这种方式，定义的是全局规则</p>
+</blockquote>
+</li>
+<li><p>在yaml配置文件中修改规则</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">userservice:</span> <span class="comment">#指定服务</span></span><br><span class="line">  <span class="attr">ribbon:</span></span><br><span class="line">    <span class="attr">NFLoadBalancerRuleClassName:</span> <span class="string">com.alibaba.cloud.nacos.ribbon.RandomRule</span>  <span class="comment"># 负载均衡规则</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>指定具体的服务，而不是全局应用修改后的规则</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="饥饿加载"><a href="#饥饿加载" class="headerlink" title="饥饿加载"></a>饥饿加载</h3><p>Ribbon默认采用懒加载，在第一次访问时才会去创建负载均衡客户端，所以第一次请求时间会长<br>饥饿加载会在项目启动时创建，降低访问时间</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">ribbon:</span></span><br><span class="line">  <span class="attr">eager-load:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span> <span class="comment"># 开启饥饿加载</span></span><br><span class="line">    <span class="attr">clients:</span> <span class="comment"># 指定饥饿加载的服务名称</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">userservice</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Nacos"><a href="#Nacos" class="headerlink" title="Nacos"></a>Nacos</h2><h3 id="Nacos是啥"><a href="#Nacos是啥" class="headerlink" title="Nacos是啥"></a>Nacos是啥</h3><p>Nacos是阿里巴巴的产品，也是一个注册中心，现在是spring cloud一个组件，比Eureka丰富，国内受欢迎</p>
+<h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><ol>
+<li><p>下载<a target="_blank" rel="noopener" href="https://nacos.io/zh-cn/">Nacos</a></p>
+</li>
+<li><p>在父工程导入依赖</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--nacos的管理依赖--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-cloud-alibaba-dependencies&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.2.5.RELEASE&lt;/version&gt;</span><br><span class="line">    &lt;type&gt;pom&lt;/type&gt;</span><br><span class="line">    &lt;scope&gt;import&lt;/scope&gt;</span><br><span class="line"> &lt;/dependency&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>在提供者和消费者中引入客户端依赖</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- nacos客户端依赖包 --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-discovery&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>消费者和提供者设置Nacos地址</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">cloud:</span></span><br><span class="line">  <span class="attr">nacos:</span></span><br><span class="line">    <span class="attr">server-addr:</span> <span class="string">nacos:8848</span> <span class="comment"># nacos服务地址</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="集群部署"><a href="#集群部署" class="headerlink" title="集群部署"></a>集群部署</h3><p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/Nacos%E9%9B%86%E7%BE%A4%E6%A8%A1%E5%9E%8B.PNG" alt="img"></p>
+<h4 id="如何设置集群"><a href="#如何设置集群" class="headerlink" title="如何设置集群"></a>如何设置集群</h4><p>使用spring.cloud.nacos.discoverycluster-name属性设置</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">cloud:</span></span><br><span class="line">  <span class="attr">nacos:</span></span><br><span class="line">    <span class="attr">server-addr:</span> <span class="string">nacos:8848</span> <span class="comment"># nacos服务地址</span></span><br><span class="line">    <span class="attr">discovery:</span></span><br><span class="line">      <span class="attr">cluster-name:</span> <span class="string">shanghai</span> <span class="comment">#集群名称</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="优先调用本地集群"><a href="#优先调用本地集群" class="headerlink" title="优先调用本地集群"></a>优先调用本地集群</h3><p>服务者调用者和服务提供者集群的名称设置为相同，然后设置调用者的负载均衡规则为NacosRule。<br>如果本地集群没有实例，则会跨集群调用</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">userservice:</span></span><br><span class="line">  <span class="attr">ribbon:</span></span><br><span class="line">    <span class="attr">NFLoadBalancerRuleClassName:</span> <span class="string">com.alibaba.cloud.nacos.ribbon.NacosRule</span>  <span class="comment"># 负载均衡规则</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="调节服务实例权重"><a href="#调节服务实例权重" class="headerlink" title="调节服务实例权重"></a>调节服务实例权重</h3><p>权重值一般是0-1之间，值越小，被访问到的可能性越小，反之亦然。</p>
+<blockquote>
+<p>如果实例要升级，可以将某一实例调为0不允许访问，进行升级后，调节成一个允许访问的值，放进来一部分用户进行测试，如果测试成功，将权重为调节为正常值，其他实例依次这样升级。</p>
+</blockquote>
+<p>实例调节方法是在nacos界面控制台进行访问</p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/nacos%E6%9D%83%E9%87%8D%E8%B0%83%E8%8A%82.PNG" alt="img"></p>
+<h3 id="环境隔离-namespace"><a href="#环境隔离-namespace" class="headerlink" title="环境隔离 namespace"></a>环境隔离 namespace</h3><p>为了管理服务和数据 做环境隔离，不同的namespace之间的服务不可见，每个namespace都有唯一的id</p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/nacos%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB.PNG" alt="img"></p>
+<p><strong>在配置文件中配置namespace:</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">cloud:</span></span><br><span class="line">  <span class="attr">nacos:</span></span><br><span class="line">    <span class="attr">server-addr:</span> <span class="string">nacos:8848</span> <span class="comment"># nacos服务地址</span></span><br><span class="line">    <span class="attr">discovery:</span></span><br><span class="line">      <span class="attr">cluster-name:</span> <span class="string">shanghai</span> <span class="comment">#集群名称</span></span><br><span class="line">    <span class="attr">discovery:</span></span><br><span class="line">      <span class="attr">namespace:</span> <span class="string">4d6ce343-9e1b-44df-a90f-2cf2b6b3d177</span> <span class="comment"># 命名空间生成的id</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Eureka和Nacos的区别"><a href="#Eureka和Nacos的区别" class="headerlink" title="Eureka和Nacos的区别"></a>Eureka和Nacos的区别</h3><p>Nacos的“心跳续约”速度比Eureka快</p>
+<p>Nacos在进行远程调用时，采用两种调用模式，临时实例和非临时实例。非临时实例不会向注册中心发起心跳续约，而是注册中心主动向服务提供者发起询问，如果非临时实例出现问题，注册中心不会剔除，而是等待非临时实例恢复。</p>
+<p>Eureka的服务提供者只会向注册中心发起拉取提供者信息，而Nacos除了拉取，还会主动向消费者推送变更信息。</p>
+<p>Nacos设置临时实例和非临时实例,默认为临时实例</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">cloud:</span></span><br><span class="line">  <span class="attr">nacos:</span></span><br><span class="line">    <span class="attr">server-addr:</span> <span class="string">nacos:8848</span> <span class="comment"># nacos服务地址</span></span><br><span class="line">    <span class="attr">discovery:</span></span><br><span class="line">      <span class="attr">cluster-name:</span> <span class="string">shanghai</span> <span class="comment">#集群名称</span></span><br><span class="line">    <span class="attr">discovery:</span></span><br><span class="line">      <span class="attr">namespace:</span> <span class="string">4d6ce343-9e1b-44df-a90f-2cf2b6b3d177</span> <span class="comment"># dev环境</span></span><br><span class="line">      <span class="attr">ephemeral:</span> <span class="literal">false</span> <span class="comment"># 是否是临时实例</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Nacos配置管理"><a href="#Nacos配置管理" class="headerlink" title="Nacos配置管理"></a>Nacos配置管理</h3><p>配置管理用来记录各个微服务的配置，当微服务配置发生变化时，可以通过配置管理服务进行热更新<br>通常用来配置一些经常需要变更的配置</p>
+<ol>
+<li><p>创建配置<img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/nacos%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86.png" alt="img"></p>
+</li>
+<li><p>微服务获取配置管理步骤<img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/nacos%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86%E6%89%A7%E8%A1%8C%E6%AD%A5%E9%AA%A4.PNG" alt="img"></p>
+<blockquote>
+<p>想要读取nacos配置文件就要知道nacos地址，nacos一般放在本地配置文件中，所以要把nacos地址和相关的信息放在创建的bootstrap.yml文件里，因为bootstrap文件的优先级高于application文件</p>
+</blockquote>
+</li>
+<li><p>引入配置管理客户端依赖</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--nacos的配置管理依赖--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-config&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>创建bootstrap文件，添加配置信息</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">userservice</span> <span class="comment">#服务名称</span></span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span> <span class="string">dev</span> <span class="comment"># 环境</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">nacos:</span></span><br><span class="line">      <span class="attr">server-addr:</span> <span class="string">localhost:8848</span> <span class="comment"># nacos地址</span></span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        <span class="attr">file-extension:</span> <span class="string">yaml</span> <span class="comment"># 文件后缀名</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>把application配置文件中相同的配置删除</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="具体使用细节"><a href="#具体使用细节" class="headerlink" title="具体使用细节"></a>具体使用细节</h3><h4 id="Nacos配置管理实现热更新"><a href="#Nacos配置管理实现热更新" class="headerlink" title="Nacos配置管理实现热更新"></a>Nacos配置管理实现热更新</h4><p>一种使用@Value注解注入，结合@RefreshScope来刷新<br>另一种使用@ConfigurationProperties注入</p>
+<blockquote>
+<p>具体操作看视频吧，有时候写出来没视频好理解。</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1LQ4y127n4?p=27">Nacos配置管理实现热更新</a></p>
+</blockquote>
+<h4 id="Nacos实现多个环境共享同个配置文件"><a href="#Nacos实现多个环境共享同个配置文件" class="headerlink" title="Nacos实现多个环境共享同个配置文件"></a>Nacos实现多个环境共享同个配置文件</h4><p>应用场景就是相同的数据信息放在一个配置文件中，让多个环境来调用。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1LQ4y127n4?p=28">多个环境实现共享文件</a></p>
+</blockquote>
+<p><strong>配置文件的优先级：nacos当前环境配置&gt;共同环境配置&gt;本地配置</strong></p>
+<blockquote>
+<p>服务名.profile.yaml&gt;服务名称.yaml&gt;本地配置</p>
+</blockquote>
+<h3 id="Nacos集群搭建"><a href="#Nacos集群搭建" class="headerlink" title="Nacos集群搭建"></a>Nacos集群搭建</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1LQ4y127n4?p=29">这步骤写出来太抽象不如偷个懒贴个十分钟左右的视频😁</a></p>
+<blockquote>
+<p>要使用到Nginx做负载均衡</p>
+</blockquote>
+<h2 id="GateWay"><a href="#GateWay" class="headerlink" title="GateWay"></a>GateWay</h2><p>网关用来对发送过来的请求进行身份和权限的验证、限流、服务路由、负载均衡等</p>
+<ul>
+<li><p>gateway</p>
+<blockquote>
+<p>基于spring提供的WebFlux，属于响应式编程的实现，性能好</p>
+</blockquote>
+</li>
+<li><p>zuul</p>
+<blockquote>
+<p>基于servlet的实现，属于阻塞式编程</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="如何搭建网关"><a href="#如何搭建网关" class="headerlink" title="如何搭建网关"></a>如何搭建网关</h3><ol>
+<li><p>创建一个网关模块</p>
+</li>
+<li><p>引入依赖</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--nacos服务注册发现依赖,有这个注册发现，才能使用gateway和其他组件--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-discovery&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;!--网关gateway依赖--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-cloud-starter-gateway&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>配置网关配置信息</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Server:</span></span><br><span class="line">	<span class="string">port:10086</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">gateway</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">nacos:</span></span><br><span class="line">      <span class="attr">server-addr:</span> <span class="string">nacos:8848</span> <span class="comment"># nacos地址</span></span><br><span class="line">    <span class="attr">gateway:</span></span><br><span class="line">      <span class="attr">routes:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">id:</span> <span class="string">user-service</span> <span class="comment"># 路由标示，必须唯一</span></span><br><span class="line">          <span class="attr">uri:</span> <span class="string">lb://userservice</span> <span class="comment"># 路由的目标地址</span></span><br><span class="line">          <span class="attr">predicates:</span> <span class="comment"># 路由断言，判断请求是否符合规则</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">Path=/user/**</span> <span class="comment"># 路径断言，判断路径是否是以/user开头，如果是则符合</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">id:</span> <span class="string">order-service</span></span><br><span class="line">          <span class="attr">uri:</span> <span class="string">lb://orderservice</span></span><br><span class="line">          <span class="attr">predicates:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">Path=/order/**</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>predicate可定义的规则还有很多：</strong></p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/%E6%96%AD%E8%A8%80%E5%B7%A5%E5%8E%82.PNG" alt="img"></p>
+<p><strong>用户发起请求执行流程：</strong></p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/%E8%AF%B7%E6%B1%82%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B.PNG" alt="img"></p>
+<h3 id="路由过滤器"><a href="#路由过滤器" class="headerlink" title="路由过滤器"></a>路由过滤器</h3><p>GatewayFilter可以对进入网关的请求和微服务返回的响应做处理</p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/%E7%BD%91%E5%85%B3%E8%BF%87%E6%BB%A4%E5%99%A8.PNG" alt="img"></p>
+<p>在网关配置文件中配置过滤器即可：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">      <span class="attr">default-filters:</span>  <span class="comment">#默认对所有的路由都生效</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">AddRequestHeader=Truth,Itcast</span> <span class="string">is</span> <span class="string">freaking</span> <span class="string">awesome!</span></span><br><span class="line"><span class="comment">#      fileter:  #单独添加过滤器</span></span><br><span class="line"><span class="comment">#        - AddRequestHeader=Truth,Itcast is 666!</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="GlobalFilter"><a href="#GlobalFilter" class="headerlink" title="GlobalFilter"></a>GlobalFilter</h4><p>可以自定义过滤规则的过滤器</p>
+<p>实现过程：定义一个类，实现GlobalFilter接口，重写方法</p>
+<p>要求：判断是否是admin账户名登录</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Order(-1)</span> <span class="comment">//值越小，优先执行该过滤器</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AuthorizeFilter</span> <span class="keyword">implements</span> <span class="title">GlobalFilter</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Mono&lt;Void&gt; <span class="title">filter</span><span class="params">(ServerWebExchange exchange, GatewayFilterChain chain)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 1.获取请求参数</span></span><br><span class="line">        ServerHttpRequest request = exchange.getRequest();</span><br><span class="line">        MultiValueMap&lt;String, String&gt; params = request.getQueryParams();</span><br><span class="line">        <span class="comment">// 2.获取参数中的 authorization 参数</span></span><br><span class="line">        String auth = params.getFirst(<span class="string">&quot;authorization&quot;</span>);</span><br><span class="line">        <span class="comment">// 3.判断参数值是否等于 admin</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="string">&quot;admin&quot;</span>.equals(auth)) &#123;</span><br><span class="line">            <span class="comment">// 4.是，放行</span></span><br><span class="line">            <span class="keyword">return</span> chain.filter(exchange);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 5.否，拦截</span></span><br><span class="line">        <span class="comment">// 5.1.设置状态码</span></span><br><span class="line">        exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);</span><br><span class="line">        <span class="comment">// 5.2.拦截请求</span></span><br><span class="line">        <span class="keyword">return</span> exchange.getResponse().setComplete();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="过滤器执行顺序"><a href="#过滤器执行顺序" class="headerlink" title="过滤器执行顺序"></a>过滤器执行顺序</h3><p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/%E8%BF%87%E6%BB%A4%E5%99%A8%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F.PNG" alt="img"></p>
+<h3 id="处理跨域问题"><a href="#处理跨域问题" class="headerlink" title="处理跨域问题"></a>处理跨域问题</h3><p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98%E7%9A%84%E5%A4%84%E7%90%86.PNG" alt="img"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>spring cloud把项目细分为很多模块，每个模块又细分为很多实例。支持的组件丰富。</p>
+<p>Dubbo没有和spring cloud相比起来，功能没有springcloud完善。</p>
+<p>具体还是要使用起来才有更深的理解</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1LQ4y127n4?p=1">传智播客</a></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">马浩源</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2021/08/23/SpringCloud/">http://example.com/2021/08/23/SpringCloud/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">马浩源</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                                <a href="/tags/Spring/">
+                                    <span class="chip bg-color">Spring</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
+                                    <span class="chip bg-color">分布式</span>
+                                </a>
+                            
+                                <a href="/tags/Spring-Cloud/">
+                                    <span class="chip bg-color">Spring Cloud</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
+                                    <span class="chip bg-color">微服务</span>
+                                </a>
+                            
+                                <a href="/tags/Ribbon/">
+                                    <span class="chip bg-color">Ribbon</span>
+                                </a>
+                            
+                                <a href="/tags/Nacos/">
+                                    <span class="chip bg-color">Nacos</span>
+                                </a>
+                            
+                                <a href="/tags/Feign/">
+                                    <span class="chip bg-color">Feign</span>
+                                </a>
+                            
+                                <a href="/tags/GateWay/">
+                                    <span class="chip bg-color">GateWay</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/08/23/SpringCloud/">
+                    <div class="card-image">
+                        
+                        <img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/sprincloud.jpg" class="responsive-img" alt="Spring Cloud">
+                        
+                        <span class="card-title">Spring Cloud</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            认识微服务
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" class="post-category">
+                                    微服务
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
+                        <span class="chip bg-color">分布式</span>
+                    </a>
+                    
+                    <a href="/tags/Spring-Cloud/">
+                        <span class="chip bg-color">Spring Cloud</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
+                        <span class="chip bg-color">微服务</span>
+                    </a>
+                    
+                    <a href="/tags/Ribbon/">
+                        <span class="chip bg-color">Ribbon</span>
+                    </a>
+                    
+                    <a href="/tags/Nacos/">
+                        <span class="chip bg-color">Nacos</span>
+                    </a>
+                    
+                    <a href="/tags/Feign/">
+                        <span class="chip bg-color">Feign</span>
+                    </a>
+                    
+                    <a href="/tags/GateWay/">
+                        <span class="chip bg-color">GateWay</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/08/18/Dubbo/">
+                    <div class="card-image">
+                        
+                        <img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/dubbo.webp" class="responsive-img" alt="Dubbo">
+                        
+                        <span class="card-title">Dubbo</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/RPC%E5%88%86%E5%B8%83%E5%BC%8F%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6/" class="post-category">
+                                    RPC分布式服务框架
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Dubbo/">
+                        <span class="chip bg-color">Dubbo</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
+                        <span class="chip bg-color">分布式</span>
+                    </a>
+                    
+                    <a href="/tags/RPC/">
+                        <span class="chip bg-color">RPC</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: MHY<br />'
+            + '文章作者: MHY<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1,h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1,h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2020-2021</span>
+            
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">MHY</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "10";
+                    var startDate = "10";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/haoyuancode/haoyuancode.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:MyyyHyyy@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2210287579" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2210287579" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
