@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Dubbo, MHY">
+    <meta name="keywords" content="Docker, MHY">
     <meta name="description" content=" ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Dubbo | MHY</title>
+    <title>Docker | MHY</title>
     <link rel="icon" type="image/jpeg" href="/medias/logo.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -284,12 +284,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/myyyhyyy/blogimg/raw/master/img/dubbo.webp')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/myyyhyyy/blogimg/raw/master/img/docker.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Dubbo</h1>
+                    <h1 class="description center-align post-title">Docker</h1>
                 </div>
             </div>
         </div>
@@ -405,16 +405,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Dubbo/">
-                                <span class="chip bg-color">Dubbo</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
-                                <span class="chip bg-color">分布式</span>
-                            </a>
-                        
-                            <a href="/tags/RPC/">
-                                <span class="chip bg-color">RPC</span>
+                            <a href="/tags/Docker/">
+                                <span class="chip bg-color">Docker</span>
                             </a>
                         
                     </div>
@@ -425,8 +417,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/RPC%E5%88%86%E5%B8%83%E5%BC%8F%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6/" class="post-category">
-                                RPC分布式服务框架
+                            <a href="/categories/Docker/" class="post-category">
+                                Docker
                             </a>
                         
                     </div>
@@ -438,7 +430,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-18
+                    2021-08-26
                 </div>
                 
 
@@ -459,120 +451,60 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
-<p><strong>集群：</strong>很多“人”一起做相同的事。一个业务部署在多台服务器上</p>
-<p><strong>分布式:</strong> 很多“人”一起做不相同的事，这些不相同的事合起来是一件大事。一个业务分解成不同的模块，部署在不同的机器上</p>
-<p><strong>Dubbo</strong>是SOA架构时代的产物，SpringCloud是微服务时代产物。对于互联网项目来说，两者都可以选择。</p>
-</blockquote>
-<p><a target="_blank" rel="noopener" href="https://dubbo.apache.org/zh/">Dubbo</a><strong>是阿里巴巴开源的一个高性能、轻量级的Java RPC(远程服务调用)框架</strong>，后来被Apache收录.</p>
-<p><strong>Dubbo架构图</strong></p>
-<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/dubbo%E6%9E%B6%E6%9E%84%E5%9B%BE.jpg"></p>
-<ul>
-<li>首先启动提供者（0）</li>
-<li>然后会将ip端口、链接等放在到注册中心（1）</li>
-<li>顾客想调用服务，会去注册中心发现服务的端口链接等信息（2）</li>
-<li>注册中心在返回给顾客（3）</li>
-<li>最后顾客去调用服务（4）</li>
-<li>调用过程会自动执行。Monitor用来做监控。</li>
-</ul>
-<p><strong>Dubbo</strong>官方推荐使用<strong>ZooKeeper</strong>作为注册中心。</p>
-<p>简单比喻来说，就是将以前写的项目中的service和和controller分离出来，原来写在同一个项目中，现在分别创建两个项目来写service和controller。<br>service作为提供服务者（provider），在application配置文件中，将自己指定到注册中心。<br>controller作为消费者（consumer），也需要在配置文件中指定到注册中心</p>
-<h2 id="Spring-Boot整合Dubbo"><a href="#Spring-Boot整合Dubbo" class="headerlink" title="Spring Boot整合Dubbo"></a>Spring Boot整合Dubbo</h2><ol>
-<li><p>服务提供方和消费方的pom中导入dubbo的spring boot<a target="_blank" rel="noopener" href="https://github.com/apache/dubbo-spring-boot-project/blob/master/README_CN.md">依赖</a></p>
-</li>
-<li><p>提供方在application配置文件中进行注册，然后在需要提供的接口实现类(也就是说要提供的服务)上，使用@Server将这个服务暴露出来</p>
+                <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Docker是一个开源的应用容器。<br>Docker将开发中的依赖、配置应用等打包成可移植的镜像，可以运行在任何Linux操作系统上。<span id="more"></span><br>运行打包好的镜像，就形成了容器，容器之间相互隔离，互不干扰</p>
 <blockquote>
-<p> 注意！一定要导入Dubbo的@Server包</p>
+<p>例如开发环境中使用的jdk是8，测试环境是7，开发将程序打包给测试，测试会因为环境的不同而报错。而Docker就可以将整个配置、依赖等环境打包成一个可移植的镜像文件，然后交给其他部门去测试、运维等，他们只需要在打包好的容器中去测试即可。</p>
 </blockquote>
-</li>
-<li><p>消费方编写controller接收提供方的接口，编写和接口相同的service接口，使用@Reference将接口注入到controller中</p>
-</li>
-<li><p>可以将service和controller中相同的接口抽取出来生成一个新的模块，然后在service和controller的pom文件中导入这个心模块即可</p>
-</li>
-</ol>
-<p><strong>项目结构示例</strong>：</p>
-<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/dubbo%E7%BB%93%E6%9E%84.png"></p>
-<p><strong>Provider配置文件：</strong></p>
-<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/%E6%8F%90%E4%BE%9B%E8%80%85%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png"></p>
-<p><strong>Consumer配置文件：</strong></p>
-<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/%E6%B6%88%E8%B4%B9%E8%80%85%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png"></p>
-<p><strong>想使用Dubbo，要先启用zookeeper和Dubbo的监控中心</strong></p>
-<h2 id="启动时检查"><a href="#启动时检查" class="headerlink" title="启动时检查"></a>启动时检查</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt; dubbo:consumer check=&quot;false | true&quot; / &gt;</span><br></pre></td></tr></table></figure>
+<p><strong>linux安装Docker并配置国内镜像源步骤:</strong><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1LQ4y127n4?p=46">步骤</a></p>
+<h2 id="Docker仓库"><a href="#Docker仓库" class="headerlink" title="Docker仓库"></a>Docker仓库</h2><p>官方镜像仓库：<a target="_blank" rel="noopener" href="https://hub.docker.com/">https://hub.docker.com/</a><br>可以使用国内网站：<a target="_blank" rel="noopener" href="https://hub.daocloud.io/">https://hub.daocloud.io/</a><br>在公司内部会采用私服的方式拉取镜像。（需要添加配置）</p>
+<blockquote>
+<p><strong>需要在/etc/docker/daemon.json</strong></p>
+<p>{<br>    “registry-mirrors”: [“<a href="https://registry.docker-cn.com&quot;]">https://registry.docker-cn.com&quot;]</a>,<br>    “insecure-registries”: [“ip:port]<br>}</p>
+<p><strong>ip:port</strong></p>
+<p>公司私服的ip和port</p>
+<p><strong>重启两个服务</strong></p>
+<p>systemctl daemon-reload<br>systemctl restart docker                          </p>
+</blockquote>
+<h2 id="操作镜像和容器"><a href="#操作镜像和容器" class="headerlink" title="操作镜像和容器"></a>操作镜像和容器</h2><p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/Docker%E9%95%9C%E5%83%8F%E5%91%BD%E4%BB%A4.PNG" alt="img"></p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/docker%E5%AE%B9%E5%99%A8%E5%91%BD%E4%BB%A4.PNG" alt="img"></p>
+<h3 id="创建运行一个容器"><a href="#创建运行一个容器" class="headerlink" title="创建运行一个容器"></a>创建运行一个容器</h3><p>例如要创建一个Nginx镜像容器，首先要去镜像仓库拉取nginx镜像，然后在仓库nginx镜像页面下查看nginx容器运行命令</p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/docker%E8%BF%90%E8%A1%8C%E5%AE%B9%E5%99%A8%E5%91%BD%E4%BB%A4.PNG" alt="img"></p>
+<h3 id="查看正在运行的容器"><a href="#查看正在运行的容器" class="headerlink" title="查看正在运行的容器"></a>查看正在运行的容器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">docker ps [OPTIONS]</span><br><span class="line"># OPTIONS说明:</span><br><span class="line"># -a: 代表查看全部的容器，包括没有运行</span><br><span class="line"># -q: 只查看容器的标识</span><br><span class="line"># -f: 根据条件过滤显示的内容</span><br><span class="line"># --format: 指定返回值的模板文件</span><br><span class="line"># -l: 显示最近创建的容器</span><br><span class="line"># -n: 列出最近创建的n个容器</span><br><span class="line"># --no-trunc: 不截断输出</span><br><span class="line"># -s: 显示总的文件大小</span><br></pre></td></tr></table></figure>
 
-<p>在整个服务启动时，注册中心会检查消费方和提供方是否存在于注册中心。默认为true开启自动检查，如果有一方没有在注册中心，比如提供方没有在注册中，启动消费方时，就会报错。<br>将check设置为false，则不会启用自动检查，只有在相互调用时才会启动检查。</p>
-<h2 id="连接超时"><a href="#连接超时" class="headerlink" title="连接超时"></a>连接超时</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt; dubbo: timeout=&quot;3000&quot; / &gt;</span><br></pre></td></tr></table></figure>
+<h3 id="查看容器的日志"><a href="#查看容器的日志" class="headerlink" title="查看容器的日志"></a>查看容器的日志</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker logs -f 容器id</span><br><span class="line"># -f: 可以滚动查看日志的最后几行</span><br></pre></td></tr></table></figure>
 
-<p>默认为1000也就是一秒。通过设置连接超时，可以防止消费方在获取服务时造成线程阻塞。</p>
-<h2 id="重试次数"><a href="#重试次数" class="headerlink" title="重试次数"></a>重试次数</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt; dubbo: timeout=&quot;3000&quot; retires=&quot;3&quot; / &gt;</span><br></pre></td></tr></table></figure>
+<h3 id="进入容器内部"><a href="#进入容器内部" class="headerlink" title="进入容器内部"></a>进入容器内部</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it 容器id(或者创建容器时起的名字) bash</span><br><span class="line"></span><br><span class="line">docker exec:进入容器内部执行的命令</span><br><span class="line">-it: 给定一个标准的输入输出终端，可以与容器交互</span><br><span class="line">bash: bash时Linux终端交互命令 </span><br></pre></td></tr></table></figure>
 
-<p>当第一次调用时失败，会额外在进行3次重新调用。</p>
-<h2 id="多版本"><a href="#多版本" class="headerlink" title="多版本"></a>多版本</h2><p>当添加新功能后，可以让一部分用户使用新功能版本，当新版本功能稳定后，将剩下的老版本全替换为新版本</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dubbo:version=1.00</span><br></pre></td></tr></table></figure>
+<h2 id="数据卷"><a href="#数据卷" class="headerlink" title="数据卷"></a>数据卷</h2><p>通过创建数据卷可以修改容器内部的数据。就是将宿主机的一个目录映射到容器中的一个目录中，宿主机在操作目录时，容器中的数据也会发生变化。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 1. 创建数据卷</span><br><span class="line">docker volume create 数据卷名称</span><br><span class="line"># 创建数据卷之后默认会存放在一个目录下 /var/lib/docker/volumes/数据卷名称/_data</span><br><span class="line">inspect: 显示一个或多个volume信息</span><br><span class="line">ls:列出所有的volume</span><br><span class="line">prune:删除未使用的volume</span><br><span class="line">rm:删除一个或多个指定的volume</span><br></pre></td></tr></table></figure>
 
-<h2 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h2><p>当消费者向提供者查询对象数据时，提供者在数据库中查询后，将数据封装发送给消费者，这两个模块之间传输对象就要使用到序列化。<br>Dubbo内部已经封装好序列化，使用时只需要在pojo创建的类实现Serializable接口。</p>
-<blockquote>
-<p>这里创建对象的pojo也是单独的模块，在接口模块pom中导入pojo模块即可使用</p>
-</blockquote>
-<h2 id="地址缓存"><a href="#地址缓存" class="headerlink" title="地址缓存"></a>地址缓存</h2><blockquote>
-<p>面试题：<br>注册中心挂了，还能访问服务么？</p>
-<p>可以，Dubbo消费者第一次调用提供者时，会从注册中心获取地址，将地址缓存到本地，以后访问的时候不会在访问注册中心。<br>如果提供者的地址发生变化，注册中心会通知消费者，消费者的本地缓存也会发生变化</p>
-</blockquote>
-<h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><p><strong>Dubbo提供了四种策略：</strong></p>
-<ol>
-<li>Random。按权重随机，默认权重为100。权重可以设置更改</li>
-<li>RoundRobn。按权重轮询。权重相同，按照1、2、3…这样依次来。权重高，会优先访问</li>
-<li>LeastActive。最少活跃调用数。优先访问速度快的服务提供者。速度相同，则随机</li>
-<li>ConsistenHash。一致性Hash。请求的参数相同，则请求到同一个提供者</li>
-</ol>
-<h2 id="集群容错"><a href="#集群容错" class="headerlink" title="集群容错"></a>集群容错</h2><p>服务提供者提供了三台提供服务器，当消费者调用A台服务器时发生错误时，处理方法如下：</p>
-<p><strong>集群容错模式：</strong></p>
-<ol>
-<li><p>Failover Cluster</p>
-<blockquote>
-<p> 失败重试，默认重试2次。访问A台服务器出错，会去访问B，B出错访问D，这两次全部出错，则报异常.一般用于读操作。使用retries配置</p>
-</blockquote>
-</li>
-<li><p>Failfast Cluster</p>
-<blockquote>
-<p>快速失败。只发起一次调用，失败就报错。用于写操作</p>
-</blockquote>
-</li>
-<li><p>Failsafe Cluster</p>
-<blockquote>
-<p>失败安全，出现异常，直接忽略，返回空结果。用于日志</p>
-</blockquote>
-</li>
-<li><p>Failback Cluster</p>
-<blockquote>
-<p>失败后自动恢复，当请求失败后，会定时自动发请求，直到成功为止。</p>
-</blockquote>
-</li>
-<li><p>Forking Cluster</p>
-<blockquote>
-<p>并行调用多个服务器，只要有一个成功即成功。广撒网，捞到一个就赚。耗性能</p>
-</blockquote>
-</li>
-<li><p>Broadcast Cluster</p>
-<blockquote>
-<p>广播所有提供者，逐个调用，有一个报错则报错</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="服务降级"><a href="#服务降级" class="headerlink" title="服务降级"></a>服务降级</h2><p>比如提供广告、支付、游戏多个服务，服务器性能不够，可以将某个服务降级</p>
-<p><strong>降级方式：</strong></p>
-<ol>
-<li><p>mock=force:return null </p>
-<blockquote>
-<p>消费者调用该方法全部返回null，用来屏蔽不重要的服务，不会发起远程调用</p>
-</blockquote>
-</li>
-<li><p>mock=fail:return null </p>
-<blockquote>
-<p>消费者在调用服务发生错误时，返回null。不抛异常。用来容忍不重要服务 在不稳定的时候也可以调用</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="小结："><a href="#小结：" class="headerlink" title="小结："></a>小结：</h2><p>学这个Dubbo在配置zookeeper时，总是提示一些错误，写好的代码因为这些工具报错没有去测试是否成功，感觉学了个空壳子。<br><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/%E8%9C%A1%E7%AC%94%E5%B0%8F%E6%96%B0.jpg"></p>
+<p><strong>使用数据卷</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 应用数据卷</span><br><span class="line"># 当你映射数据卷时，如果数据卷不存在。Docker会帮你自动创建</span><br><span class="line">docker run -v 数据卷名称:容器内部路径 镜像id</span><br><span class="line"># 直接指定一个路径作为数据卷的存放位置。这个路径下是空的。</span><br><span class="line">docker run -v 路径:容器内部的路径 镜像id</span><br></pre></td></tr></table></figure>
+
+<h2 id="自定义镜像"><a href="#自定义镜像" class="headerlink" title="自定义镜像"></a>自定义镜像</h2><p><strong>DockerFile</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 1. 创建一个Dockerfile文件，并且指定自定义镜像信息。</span><br><span class="line"># Dockerfile文件中常用的内容</span><br><span class="line">from: 指定当前自定义镜像依赖的环境</span><br><span class="line">copy: 将相对路径下的内容复制到自定义镜像中</span><br><span class="line">workdir: 声明镜像的默认工作目录</span><br><span class="line"># 举个例子，自定义一个tomcat镜像，并且将ssm.war部署到tomcat中</span><br><span class="line">from daocloud.io/library/tomcat:8.5.15-jre8</span><br><span class="line">copy ssm.war /usr/local/tomcat/webapps</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/Docker%E8%87%AA%E5%AE%9A%E4%B9%89%E9%95%9C%E5%83%8F.PNG" alt="img"></p>
+<p>使用java:8-alpine镜像，简化镜像的构建过程</p>
+<h2 id="DockerCompose"><a href="#DockerCompose" class="headerlink" title="DockerCompose"></a>DockerCompose</h2><p>基于Compose文件，快速部署分布式应用，不需要手动一个一个的创建和运行容器<br>Compose文件是一个文本文件，通过指令定义集群中的每个容器如何运行</p>
+<p>下载DockerCompose：<a target="_blank" rel="noopener" href="https://github.com/docker/compose/releases">https://github.com/docker/compose/releases</a><br>下载后放在服务器或虚拟机的/usr/local/bin目录下</p>
+<p>修改权限</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x /usr/<span class="built_in">local</span>/bin/docker-compose</span><br></pre></td></tr></table></figure>
+
+<p>部署应用实例： <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1LQ4y127n4?p=59">https://www.bilibili.com/video/BV1LQ4y127n4?p=59</a></p>
+<h2 id="Docker私有镜像仓库"><a href="#Docker私有镜像仓库" class="headerlink" title="Docker私有镜像仓库"></a>Docker私有镜像仓库</h2><p>可以搭建自己的私有仓库，比如企业自己可能采用私有仓库:<strong>Docker Registry</strong></p>
+<h3 id="带图形化界面的版本"><a href="#带图形化界面的版本" class="headerlink" title="带图形化界面的版本"></a>带图形化界面的版本</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.0&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">registry:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">registry</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./registry-data:/var/lib/registry</span></span><br><span class="line">  <span class="attr">ui:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">joxit/docker-registry-ui:static</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8080</span><span class="string">:80</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">REGISTRY_TITLE=我的私有仓库</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">REGISTRY_URL=http://registry:5000</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">registry</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>配置信任地址：</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开要修改的文件</span></span><br><span class="line"><span class="string">vi</span> <span class="string">/etc/docker/daemon.json</span></span><br><span class="line"><span class="comment"># 添加内容：</span></span><br><span class="line"><span class="string">&quot;insecure-registries&quot;</span><span class="string">:[&quot;http://192.168.150.101:8080&quot;]</span></span><br><span class="line"><span class="comment"># 重加载</span></span><br><span class="line"><span class="string">systemctl</span> <span class="string">daemon-reload</span></span><br><span class="line"><span class="comment"># 重启docker</span></span><br><span class="line"><span class="string">systemctl</span> <span class="string">restart</span> <span class="string">docker</span></span><br></pre></td></tr></table></figure>
+
+<p>推送本地镜像到私有仓库必须重命名，以仓库名地址为前缀</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker tag nginx:latest ip地址:端口/nginx:1.0</span><br></pre></td></tr></table></figure>
+
+<p>查看私有镜像仓库，访问服务器或虚拟机的ip地址加上配置的端口</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>实际开发中将代码打成jar包，然后配置每个模块的DockerFile文件，最后使用DockerCompose统一部署<br>首先部署nacos，然后在部署其他服务，因为其他服务优先启动没有找到nacos会报错</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1CJ411T7BK?p=2">itheima</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lqpf199681/article/details/110518692?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162993739316780261951441%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=162993739316780261951441&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-110518692.first_rank_v2_pc_rank_v29&utm_term=docker&spm=1018.2226.3001.4187">1024肥宅</a></p>
 
                 
             </div>
@@ -599,7 +531,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/08/18/Dubbo/">http://example.com/2021/08/18/Dubbo/</a>
+                    <a href="http://example.com/2021/08/26/Docker/">http://example.com/2021/08/26/Docker/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -637,16 +569,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Dubbo/">
-                                    <span class="chip bg-color">Dubbo</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">
-                                    <span class="chip bg-color">分布式</span>
-                                </a>
-                            
-                                <a href="/tags/RPC/">
-                                    <span class="chip bg-color">RPC</span>
+                                <a href="/tags/Docker/">
+                                    <span class="chip bg-color">Docker</span>
                                 </a>
                             
                         </div>
@@ -816,9 +740,59 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/08/26/Docker/">
+                    <div class="card-image">
+                        
+                        <img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/docker.jpg" class="responsive-img" alt="Docker">
+                        
+                        <span class="card-title">Docker</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            介绍Docker是一个开源的应用容器。Docker将开发中的依赖、配置应用等打包成可移植的镜像，可以运行在任何Linux操作系统上。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Docker/" class="post-category">
+                                    Docker
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Docker/">
+                        <span class="chip bg-color">Docker</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/08/23/SpringCloud/">
                     <div class="card-image">
@@ -835,9 +809,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -887,54 +861,6 @@
                     
                     <a href="/tags/GateWay/">
                         <span class="chip bg-color">GateWay</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/08/16/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-                    <div class="card-image">
-                        
-                        <img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/git.jpg" class="responsive-img" alt="Git常用命令">
-                        
-                        <span class="card-title">Git常用命令</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            一些平时经常使用的命令
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-16
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Git/" class="post-category">
-                                    Git
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Git/">
-                        <span class="chip bg-color">Git</span>
                     </a>
                     
                 </div>
