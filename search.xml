@@ -8,7 +8,7 @@
       <link href="/2022/02/28/Vue-cli/"/>
       <url>/2022/02/28/Vue-cli/</url>
       
-        <content type="html"><![CDATA[<p>今天是农历大年三十，现在是凌晨12点21，&lt;!– mor刚才成功启动了一个自己创建的vue类的项目，有点兴奋，但也有点发愁</p><p><strong>兴奋</strong>是因为解决了自己终于知道怎么使用前端的东西，而不是像两天前，问那种傻×的问题，两天能找到方法，觉得已经挺欣慰的。现在，i know，可以使用vue cli快速创建项目，就能生成那些可以交互的东西了，应该是这样，还没深入去用.</p><p><strong>发愁</strong>是因为跟着做的那个项目还没做完，还剩四天左右就可以做完，但和老师说的是15天搞定毕设的后端界面，那只有使用现成的vue-admin去改了。前端现在也有点不太懂，懵的状态，慢慢学吧，了解的越多，越清晰，也会觉得自己越垃圾，也会有一点眼高手低。</p><h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>vue cli现在用的版本是4.5.15，创建的项目启动使用的是 <strong>npm run serve</strong>,不是npm run dev</p><blockquote><p>csdn可以使用 <strong>vue—npm run serve 和 npm run dev的区别</strong>查到解释</p></blockquote><p>命令创建项目的方式:</p><p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20220131003927219.png" alt="image-20220131003927219"></p>]]></content>
+        <content type="html"><![CDATA[<p>今天是农历大年三十，现在是凌晨12点21，<span id="more"></span>刚才成功启动了一个自己创建的vue类的项目，有点兴奋，但也有点发愁</p><p><strong>兴奋</strong>是因为解决了自己终于知道怎么使用前端的东西，而不是像两天前，问那种傻×的问题，两天能找到方法，觉得已经挺欣慰的。现在，i know，可以使用vue cli快速创建项目，就能生成那些可以交互的东西了，应该是这样，还没深入去用.</p><p><strong>发愁</strong>是因为跟着做的那个项目还没做完，还剩四天左右就可以做完，但和老师说的是15天搞定毕设的后端界面，那只有使用现成的vue-admin去改了。前端现在也有点不太懂，懵的状态，慢慢学吧，了解的越多，越清晰，也会觉得自己越垃圾，也会有一点眼高手低。</p><h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>vue cli现在用的版本是4.5.15，创建的项目启动使用的是 <strong>npm run serve</strong>,不是npm run dev</p><blockquote><p>csdn可以使用 <strong>vue—npm run serve 和 npm run dev的区别</strong>查到解释</p></blockquote><p>命令创建项目的方式:</p><p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20220131003927219.png" alt="image-20220131003927219"></p>]]></content>
       
       
       
