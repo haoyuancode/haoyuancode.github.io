@@ -13,23 +13,25 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="一些平时经常使用的命令">
-  <meta name="author" content="MyyyHyyy">
+  <meta name="description" content=" ">
+  <meta name="author" content="MHY">
   <meta name="keywords" content="">
-  <meta name="description" content="一些平时经常使用的命令">
+  <meta name="description" content="Swagger用来生成后端在线接口文档，方便后端对接口进行测试。产生的是REST风格  导入依赖  创建配置类 12345678910111213141516171819202122@Bean public Docket webApiConfig()&amp;#123;        return new Docket(DocumentationType.SWAGGER_2)             .g">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git常用命令">
-<meta property="og:url" content="http://example.com/2021/08/16/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:title" content="Swagger">
+<meta property="og:url" content="http://example.com/2022/02/28/Swagger/index.html">
 <meta property="og:site_name" content="MHY">
-<meta property="og:description" content="一些平时经常使用的命令">
+<meta property="og:description" content="Swagger用来生成后端在线接口文档，方便后端对接口进行测试。产生的是REST风格  导入依赖  创建配置类 12345678910111213141516171819202122@Bean public Docket webApiConfig()&amp;#123;        return new Docket(DocumentationType.SWAGGER_2)             .g">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-08-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-11-05T08:44:59.384Z">
+<meta property="og:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20211225152914244.png">
+<meta property="og:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20211225153638827.png">
+<meta property="article:published_time" content="2022-02-28T11:02:44.204Z">
+<meta property="article:modified_time" content="2022-02-28T11:02:27.198Z">
 <meta property="article:author" content="MHY">
-<meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20211225152914244.png">
   
-  <title>Git常用命令 - MHY</title>
+  <title>Swagger - MHY</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -175,7 +177,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Git常用命令">
+            <span class="h2" id="subtitle" title="Swagger">
               
             </span>
 
@@ -185,8 +187,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-08-16 00:00" pubdate>
-        2021年8月16日 凌晨
+      <time datetime="2022-02-28 19:02" pubdate>
+        2022年2月28日 晚上
       </time>
     </span>
   
@@ -196,7 +198,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      585 字
+      812 字
     </span>
   
 
@@ -205,7 +207,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2 分钟
+      3 分钟
     </span>
   
 
@@ -234,88 +236,39 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Git常用命令</h1>
+            <h1 style="display: none">Swagger</h1>
             
             <div class="markdown-body">
-              <p>一些平时经常使用的命令<span id="more"></span></p>
-<h3 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h3><blockquote>
-<p>git  status</p>
+              <h2 id="Swagger"><a href="#Swagger" class="headerlink" title="Swagger"></a>Swagger</h2><p>用来生成后端在线接口文档，方便后端对接口进行测试。产生的是REST风格</p>
+<ol>
+<li><p>导入依赖</p>
+</li>
+<li><p>创建配置类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Bean</span><br> <span class="hljs-function"><span class="hljs-keyword">public</span> Docket <span class="hljs-title">webApiConfig</span><span class="hljs-params">()</span></span>&#123;<br>   <br>     <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Docket(DocumentationType.SWAGGER_2)<br>             .groupName(<span class="hljs-string">&quot;webApi&quot;</span>)<br>             .apiInfo(webApiInfo())<br>             .select()<br>             .paths(Predicates.not(PathSelectors.regex(<span class="hljs-string">&quot;/admin/.*&quot;</span>)))<br>             .paths(Predicates.not(PathSelectors.regex(<span class="hljs-string">&quot;/error.*&quot;</span>)))<br>             .build();<br>   <br> &#125;<br> <br> <span class="hljs-function"><span class="hljs-keyword">private</span> ApiInfo <span class="hljs-title">webApiInfo</span><span class="hljs-params">()</span></span>&#123;<br>   <br>     <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ApiInfoBuilder()<br>             .title(<span class="hljs-string">&quot;网站-课程中心API文档&quot;</span>)<br>             .description(<span class="hljs-string">&quot;本文档描述了课程中心微服务接口定义&quot;</span>)<br>             .version(<span class="hljs-string">&quot;1.0&quot;</span>)<br>             .contact(<span class="hljs-keyword">new</span> Contact(<span class="hljs-string">&quot;Helen&quot;</span>, <span class="hljs-string">&quot;http://atguigu.com&quot;</span>, <span class="hljs-string">&quot;55317332@qq.com&quot;</span>))<br>             .build();<br> &#125;<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在配置类中加入以下方法，根据需要进行修改即可</p>
+<p>注意，要将此类加在配置类中，并且可以交给spring管理</p>
 </blockquote>
-<h3 id="初始化本地库"><a href="#初始化本地库" class="headerlink" title="初始化本地库"></a>初始化本地库</h3><blockquote>
-<p>git init</p>
+</li>
+<li><p>最后运行boot启动类，在浏览器中输入swagger访问路径即可</p>
+<blockquote>
+<p>访问路径 地址：端口号/swagger-ui.html</p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20211225152914244.png" srcset="/img/loading.gif" lazyload alt="image-20211225152914244"></p>
 </blockquote>
-<p>在本地磁盘下创建一个文件夹，使用git进入该文件夹，使用git init进行初始化，初始化后不要修改生成的文件</p>
-<h3 id="将文件添加到暂存区"><a href="#将文件添加到暂存区" class="headerlink" title="将文件添加到暂存区"></a>将文件添加到暂存区</h3><blockquote>
-<p>git add 文件名</p>
-</blockquote>
-<h3 id="从暂存区删除文件"><a href="#从暂存区删除文件" class="headerlink" title="从暂存区删除文件"></a>从暂存区删除文件</h3><blockquote>
-<p>git rm –cached 文件名</p>
-</blockquote>
-<h3 id="将暂存区文件提交到本地库"><a href="#将暂存区文件提交到本地库" class="headerlink" title="将暂存区文件提交到本地库"></a>将暂存区文件提交到本地库</h3><blockquote>
-<p>git commit -m “说明信息” 文件名</p>
-</blockquote>
-<h3 id="查看版本日志信息"><a href="#查看版本日志信息" class="headerlink" title="查看版本日志信息"></a>查看版本日志信息</h3><blockquote>
-<p>git reflog,简略</p>
-<p>git log,完整信息</p>
-</blockquote>
-<h3 id="版本穿梭-切换版本"><a href="#版本穿梭-切换版本" class="headerlink" title="版本穿梭(切换版本)"></a>版本穿梭(切换版本)</h3><blockquote>
-<p>git reset –hard 版本号</p>
-</blockquote>
-<h3 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h3><blockquote>
-<p>git branch -v</p>
-</blockquote>
-<h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><blockquote>
-<p>git branch 分支名</p>
-</blockquote>
-<h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><blockquote>
-<p>git checkout 分支名</p>
-<p>切换回master git checkout master</p>
-</blockquote>
-<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><blockquote>
-<p>git merge 分支名</p>
-</blockquote>
-<h3 id="冲突合并"><a href="#冲突合并" class="headerlink" title="冲突合并"></a>冲突合并</h3><p>两个分支在同一个文件的同一个位置，有两套不同的修改，git无法决定使用哪一个，必须人为决定</p>
-<p>进入文件，将文件中的《《《《 和====和》》》内容删除，保留想要更改的内容</p>
-<p>然后提交暂存区、提交本地库。提交本地库时，不加文件名，例如 git commit -m “test”</p>
-<h3 id="查看远程库别名"><a href="#查看远程库别名" class="headerlink" title="查看远程库别名"></a>查看远程库别名</h3><blockquote>
-<p>git remote -v</p>
-</blockquote>
-<h3 id="创建远程库别名"><a href="#创建远程库别名" class="headerlink" title="创建远程库别名"></a>创建远程库别名</h3><blockquote>
-<p>git remote add  别名  链接</p>
-<p>别名最好和仓库名相同</p>
-</blockquote>
-<h3 id="推送远程库"><a href="#推送远程库" class="headerlink" title="推送远程库"></a>推送远程库</h3><blockquote>
-<p>git push 别名(或者链接名)  分支名</p>
-</blockquote>
-<h3 id="拉取远程库"><a href="#拉取远程库" class="headerlink" title="拉取远程库"></a>拉取远程库</h3><blockquote>
-<p>git pull 别名(或链接名) 分支名</p>
-</blockquote>
-<h3 id="克隆远程库到本地"><a href="#克隆远程库到本地" class="headerlink" title="克隆远程库到本地"></a>克隆远程库到本地</h3><blockquote>
-<p>git clone 链接</p>
-</blockquote>
-<h3 id="生成ssh免密登录"><a href="#生成ssh免密登录" class="headerlink" title="生成ssh免密登录"></a>生成ssh免密登录</h3><blockquote>
-<p>ssh-keygen -t rsa -C </p>
-</blockquote>
+</li>
+</ol>
+<p>定义在类上：@Api</p>
+<p>定义在方法上：@ApiOperation</p>
+<p>定义在参数上：@ApiParam</p>
+<p>用来说明接口作用，自定义信息</p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20211225153638827.png" srcset="/img/loading.gif" lazyload alt="image-20211225153638827"></p>
 
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/Git/">Git</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/Git/">Git</a>
-                    
-                  </div>
                 
               </div>
               
@@ -330,18 +283,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/08/17/Nginx/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Nginx</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/08/12/SpringBoot/">
-                        <span class="hidden-mobile">SpringBoot</span>
+                      <a href="/2022/02/28/Vue-cli/">
+                        <span class="hidden-mobile">Vue cli</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

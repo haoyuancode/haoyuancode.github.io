@@ -13,23 +13,32 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="一些平时经常使用的命令">
-  <meta name="author" content="MyyyHyyy">
+  <meta name="description" content="介绍Nginx是一个高性能的HTTP和反向代理服务器，并发能力强，占有内存少，为性能优化开发，能经受高负载的考验。淘宝，京东，百度等都在使用">
+  <meta name="author" content="马浩源">
   <meta name="keywords" content="">
-  <meta name="description" content="一些平时经常使用的命令">
+  <meta name="description" content="介绍Nginx是一个高性能的HTTP和反向代理服务器，并发能力强，占有内存少，为性能优化开发，能经受高负载的考验。淘宝，京东，百度等都在使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git常用命令">
-<meta property="og:url" content="http://example.com/2021/08/16/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:title" content="Nginx">
+<meta property="og:url" content="http://example.com/2021/08/17/Nginx/index.html">
 <meta property="og:site_name" content="MHY">
-<meta property="og:description" content="一些平时经常使用的命令">
+<meta property="og:description" content="介绍Nginx是一个高性能的HTTP和反向代理服务器，并发能力强，占有内存少，为性能优化开发，能经受高负载的考验。淘宝，京东，百度等都在使用">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-08-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-11-05T08:44:59.384Z">
+<meta property="og:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20210817164310207.png">
+<meta property="og:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20210817165442380.png">
+<meta property="og:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20210817170727629.png">
+<meta property="og:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20210817171258801.png">
+<meta property="og:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/Nginx%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.PNG">
+<meta property="og:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/nginx%E9%BB%98%E8%AE%A4%E8%AE%BF%E9%97%AE%E6%88%90%E5%8A%9F%E7%95%8C%E9%9D%A2.PNG">
+<meta property="og:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/nginx%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.PNG">
+<meta property="article:published_time" content="2021-08-16T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-30T09:02:28.479Z">
 <meta property="article:author" content="MHY">
-<meta property="article:tag" content="Git">
+<meta property="article:tag" content="Nginx">
+<meta property="article:tag" content="负载均衡">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20210817164310207.png">
   
-  <title>Git常用命令 - MHY</title>
+  <title>Nginx - MHY</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -175,7 +184,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Git常用命令">
+            <span class="h2" id="subtitle" title="Nginx">
               
             </span>
 
@@ -185,8 +194,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-08-16 00:00" pubdate>
-        2021年8月16日 凌晨
+      <time datetime="2021-08-17 00:00" pubdate>
+        2021年8月17日 凌晨
       </time>
     </span>
   
@@ -196,7 +205,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      585 字
+      1.3k 字
     </span>
   
 
@@ -205,7 +214,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2 分钟
+      4 分钟
     </span>
   
 
@@ -234,68 +243,52 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Git常用命令</h1>
+            <h1 style="display: none">Nginx</h1>
             
             <div class="markdown-body">
-              <p>一些平时经常使用的命令<span id="more"></span></p>
-<h3 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h3><blockquote>
-<p>git  status</p>
+              <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><strong>Nginx</strong>是一个高性能的HTTP和反向代理服务器，并发能力强，占有内存少，为性能优化开发，能经受高负载的考验。淘宝，京东，百度等都在使用</p>
+<span id="more"></span>
+
+<h2 id="理解概念"><a href="#理解概念" class="headerlink" title="理解概念"></a>理解概念</h2><h3 id="正向代理："><a href="#正向代理：" class="headerlink" title="正向代理："></a><strong>正向代理</strong>：</h3><p> 通常来说，在国内访问国外的网站，是不能访问成功的。通过配置代理服务器，发送请求给代理服务器，然后经过代理服务器将请求发送给想要访问的国外网站，最后国外网站成功过返回数据。</p>
+<p>也可以理解为正向代理是代理的客户端</p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20210817164310207.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="反向代理："><a href="#反向代理：" class="headerlink" title="反向代理："></a><strong>反向代理</strong>：</h3><p>将请求发送给反向代理服务器，由反向代理服务器去选择目标服务器获取数据并返回，此时反向代理服务器和目标服务器对外就是一个服务器，暴露的是代理服务器地址，隐藏了真是服务器的IP地址</p>
+<p>简单理解为反向代理代理的是服务器，比如百度在全国有很多服务器，暴漏一个baidu.com地址就能实现访问，从而隐藏了那些真实服务器地址</p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20210817165442380.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="负载均衡："><a href="#负载均衡：" class="headerlink" title="负载均衡："></a>负载均衡：</h3><p>单个服务器解决不了，增加服务器的数量，将请求分发各个服务器上，将原先请求集中到单个服务器上的情况改为将请求分发到多个服务器上，将负载分发到不同的服务器</p>
+<blockquote>
+<p>Nginx提供的负载均衡策略有两种：</p>
+<ol>
+<li><p>内置策略</p>
+<blockquote>
+<ul>
+<li>轮询</li>
+<li>加权轮询</li>
+<li>ip hash</li>
+</ul>
 </blockquote>
-<h3 id="初始化本地库"><a href="#初始化本地库" class="headerlink" title="初始化本地库"></a>初始化本地库</h3><blockquote>
-<p>git init</p>
+</li>
+<li><p>扩展策略</p>
+</li>
+</ol>
 </blockquote>
-<p>在本地磁盘下创建一个文件夹，使用git进入该文件夹，使用git init进行初始化，初始化后不要修改生成的文件</p>
-<h3 id="将文件添加到暂存区"><a href="#将文件添加到暂存区" class="headerlink" title="将文件添加到暂存区"></a>将文件添加到暂存区</h3><blockquote>
-<p>git add 文件名</p>
-</blockquote>
-<h3 id="从暂存区删除文件"><a href="#从暂存区删除文件" class="headerlink" title="从暂存区删除文件"></a>从暂存区删除文件</h3><blockquote>
-<p>git rm –cached 文件名</p>
-</blockquote>
-<h3 id="将暂存区文件提交到本地库"><a href="#将暂存区文件提交到本地库" class="headerlink" title="将暂存区文件提交到本地库"></a>将暂存区文件提交到本地库</h3><blockquote>
-<p>git commit -m “说明信息” 文件名</p>
-</blockquote>
-<h3 id="查看版本日志信息"><a href="#查看版本日志信息" class="headerlink" title="查看版本日志信息"></a>查看版本日志信息</h3><blockquote>
-<p>git reflog,简略</p>
-<p>git log,完整信息</p>
-</blockquote>
-<h3 id="版本穿梭-切换版本"><a href="#版本穿梭-切换版本" class="headerlink" title="版本穿梭(切换版本)"></a>版本穿梭(切换版本)</h3><blockquote>
-<p>git reset –hard 版本号</p>
-</blockquote>
-<h3 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h3><blockquote>
-<p>git branch -v</p>
-</blockquote>
-<h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><blockquote>
-<p>git branch 分支名</p>
-</blockquote>
-<h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><blockquote>
-<p>git checkout 分支名</p>
-<p>切换回master git checkout master</p>
-</blockquote>
-<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><blockquote>
-<p>git merge 分支名</p>
-</blockquote>
-<h3 id="冲突合并"><a href="#冲突合并" class="headerlink" title="冲突合并"></a>冲突合并</h3><p>两个分支在同一个文件的同一个位置，有两套不同的修改，git无法决定使用哪一个，必须人为决定</p>
-<p>进入文件，将文件中的《《《《 和====和》》》内容删除，保留想要更改的内容</p>
-<p>然后提交暂存区、提交本地库。提交本地库时，不加文件名，例如 git commit -m “test”</p>
-<h3 id="查看远程库别名"><a href="#查看远程库别名" class="headerlink" title="查看远程库别名"></a>查看远程库别名</h3><blockquote>
-<p>git remote -v</p>
-</blockquote>
-<h3 id="创建远程库别名"><a href="#创建远程库别名" class="headerlink" title="创建远程库别名"></a>创建远程库别名</h3><blockquote>
-<p>git remote add  别名  链接</p>
-<p>别名最好和仓库名相同</p>
-</blockquote>
-<h3 id="推送远程库"><a href="#推送远程库" class="headerlink" title="推送远程库"></a>推送远程库</h3><blockquote>
-<p>git push 别名(或者链接名)  分支名</p>
-</blockquote>
-<h3 id="拉取远程库"><a href="#拉取远程库" class="headerlink" title="拉取远程库"></a>拉取远程库</h3><blockquote>
-<p>git pull 别名(或链接名) 分支名</p>
-</blockquote>
-<h3 id="克隆远程库到本地"><a href="#克隆远程库到本地" class="headerlink" title="克隆远程库到本地"></a>克隆远程库到本地</h3><blockquote>
-<p>git clone 链接</p>
-</blockquote>
-<h3 id="生成ssh免密登录"><a href="#生成ssh免密登录" class="headerlink" title="生成ssh免密登录"></a>生成ssh免密登录</h3><blockquote>
-<p>ssh-keygen -t rsa -C </p>
-</blockquote>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20210817170727629.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="动静分离："><a href="#动静分离：" class="headerlink" title="动静分离："></a>动静分离：</h3><p>为了加快网站的解析速度，将动态页面和静态页面由不同的服务器来解析.静态资源比如HTML、css，动态资源比如jsp，servlet等</p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20210817171258801.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h2 id="使用Nginx"><a href="#使用Nginx" class="headerlink" title="使用Nginx"></a>使用Nginx</h2><p>在Windows系统上使用达到快速入门，实际应用是安装到linux操作系统上，但使用原理和操作大差不差。</p>
+<p>官方下载地址：<a target="_blank" rel="noopener" href="http://nginx.org/en/download.html">http://nginx.org/en/download.html</a></p>
+<p>wwindows版本下载解压后的目录:</p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/Nginx%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.PNG" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>在此目录中启用cmd命令窗口，输入nginx.exe就能启动nginx，默认端口为80，可省略不写端口</p>
+<p>启动后在浏览器访问成功界面如下</p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/nginx%E9%BB%98%E8%AE%A4%E8%AE%BF%E9%97%AE%E6%88%90%E5%8A%9F%E7%95%8C%E9%9D%A2.PNG" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>经常使用修改的配置是在conf目录里的nginx.conf</p>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/nginx%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.PNG" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>打开nginx.conf,将多余的#注释内容删除后，可以清晰的对其进行分析</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-string">worker_processes</span>  <span class="hljs-number">1</span><span class="hljs-string">;</span>  <span class="hljs-comment">#worker_processes 值越大，可以支持的并发处理量也越多，但是 会受到硬件、软件等设备的制约。</span><br><br><span class="hljs-string">events</span> &#123;<br>    <span class="hljs-string">worker_connections</span>  <span class="hljs-number">1024</span><span class="hljs-string">;</span>  <span class="hljs-comment">#每个worker_processes最大的连接数</span><br>&#125;<br><br><span class="hljs-string">http</span> &#123;<br>    <span class="hljs-comment">#对连接超时、日志等一些的配置定义</span><br>    <span class="hljs-string">include</span>       <span class="hljs-string">mime.types;</span><br>    <span class="hljs-string">default_type</span>  <span class="hljs-string">application/octet-stream;</span><br>    <span class="hljs-string">sendfile</span>        <span class="hljs-string">on;</span><br>    <span class="hljs-string">keepalive_timeout</span>  <span class="hljs-number">65</span><span class="hljs-string">;</span><br><br>    <span class="hljs-comment">#server可以有多个，每个server里边的location也可以有多个</span><br>    <span class="hljs-string">server</span> &#123;<br>        <span class="hljs-string">listen</span>       <span class="hljs-number">80</span><span class="hljs-string">;</span><br>        <span class="hljs-string">server_name</span>  <span class="hljs-string">localhost;</span><br><br>        <span class="hljs-string">location</span> <span class="hljs-string">/</span> &#123;<br>            <span class="hljs-string">root</span>   <span class="hljs-string">html;</span><br>            <span class="hljs-string">index</span>  <span class="hljs-string">index.html</span> <span class="hljs-string">index.htm;</span><br>        &#125;<br>        <span class="hljs-string">error_page</span>   <span class="hljs-number">500</span> <span class="hljs-number">502</span> <span class="hljs-number">503</span> <span class="hljs-number">504</span>  <span class="hljs-string">/50x.html;</span><br>        <span class="hljs-string">location</span> <span class="hljs-string">=</span> <span class="hljs-string">/50x.html</span> &#123;<br>            <span class="hljs-string">root</span>   <span class="hljs-string">html;</span><br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
 
             </div>
             <hr>
@@ -305,7 +298,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/Git/">Git</a>
+                      <a class="hover-with-bg" href="/categories/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">负载均衡</a>
                     
                   </div>
                 
@@ -313,7 +306,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Git/">Git</a>
+                      <a class="hover-with-bg" href="/tags/Nginx/">Nginx</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">负载均衡</a>
                     
                   </div>
                 
@@ -330,9 +325,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/08/17/Nginx/">
+                      <a href="/2021/08/18/Dubbo/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Nginx</span>
+                        <span class="hidden-mobile">Dubbo</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -340,8 +335,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/08/12/SpringBoot/">
-                        <span class="hidden-mobile">SpringBoot</span>
+                      <a href="/2021/08/16/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+                        <span class="hidden-mobile">Git常用命令</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
