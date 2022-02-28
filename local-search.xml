@@ -17,6 +17,19 @@
   
   
   <entry>
+    <title>Swagger</title>
+    <link href="/2021/12/25/Swagger/"/>
+    <url>/2021/12/25/Swagger/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Swagger"><a href="#Swagger" class="headerlink" title="Swagger"></a>Swagger</h2><p>用来生成后端在线接口文档，方便后端对接口进行测试。产生的是REST风格</p><ol><li><p>导入依赖</p></li><li><p>创建配置类</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Bean</span><br> <span class="hljs-function"><span class="hljs-keyword">public</span> Docket <span class="hljs-title">webApiConfig</span><span class="hljs-params">()</span></span>&#123;<br>   <br>     <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Docket(DocumentationType.SWAGGER_2)<br>             .groupName(<span class="hljs-string">&quot;webApi&quot;</span>)<br>             .apiInfo(webApiInfo())<br>             .select()<br>             .paths(Predicates.not(PathSelectors.regex(<span class="hljs-string">&quot;/admin/.*&quot;</span>)))<br>             .paths(Predicates.not(PathSelectors.regex(<span class="hljs-string">&quot;/error.*&quot;</span>)))<br>             .build();<br>   <br> &#125;<br> <br> <span class="hljs-function"><span class="hljs-keyword">private</span> ApiInfo <span class="hljs-title">webApiInfo</span><span class="hljs-params">()</span></span>&#123;<br>   <br>     <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ApiInfoBuilder()<br>             .title(<span class="hljs-string">&quot;网站-课程中心API文档&quot;</span>)<br>             .description(<span class="hljs-string">&quot;本文档描述了课程中心微服务接口定义&quot;</span>)<br>             .version(<span class="hljs-string">&quot;1.0&quot;</span>)<br>             .contact(<span class="hljs-keyword">new</span> Contact(<span class="hljs-string">&quot;Helen&quot;</span>, <span class="hljs-string">&quot;http://atguigu.com&quot;</span>, <span class="hljs-string">&quot;55317332@qq.com&quot;</span>))<br>             .build();<br> &#125;<br></code></pre></td></tr></table></figure><blockquote><p>在配置类中加入以下方法，根据需要进行修改即可</p><p>注意，要将此类加在配置类中，并且可以交给spring管理</p></blockquote></li><li><p>最后运行boot启动类，在浏览器中输入swagger访问路径即可</p><blockquote><p>访问路径 地址：端口号/swagger-ui.html</p><p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20211225152914244.png" alt="image-20211225152914244"></p></blockquote></li></ol><p>定义在类上：@Api</p><p>定义在方法上：@ApiOperation</p><p>定义在参数上：@ApiParam</p><p>用来说明接口作用，自定义信息</p><p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20211225153638827.png" alt="image-20211225153638827"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Mybatis-plus</title>
     <link href="/2021/12/24/MP/"/>
     <url>/2021/12/24/MP/</url>
