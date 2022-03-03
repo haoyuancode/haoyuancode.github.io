@@ -14,24 +14,27 @@
   
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content=" ">
-  <meta name="author" content="mason">
+  <meta name="author" content="MHY">
   <meta name="keywords" content="">
-  <meta name="description" content="Swagger用来生成后端在线接口文档，方便后端对接口进行测试。产生的是REST风格  导入依赖  创建配置类 12345678910111213141516171819202122@Bean public Docket webApiConfig()&amp;#123;        return new Docket(DocumentationType.SWAGGER_2)             .g">
+  <meta name="description" content="介绍Jwt全称是JSON Web Tokens  使用json的形式作为web应用中的令牌，将需要传输的信息(比如用户名和密码)作为json对象进行传输，在传输过程中还可以进行加密、认证授权操作。  应用场景 授权  最常用的场景。用户登录过后，以后的客户端请求中都会包含JWT数据，一方面不用每次都输入账号和密码，另一方面允许用户访问令牌中允许的路由、服务和资源。常用的单点登录就是使用JWT的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Swagger">
-<meta property="og:url" content="http://example.com/2021/12/25/Swagger/index.html">
+<meta property="og:title" content="JWT">
+<meta property="og:url" content="http://example.com/2022/02/28/JWT/index.html">
 <meta property="og:site_name" content="MHY">
-<meta property="og:description" content="Swagger用来生成后端在线接口文档，方便后端对接口进行测试。产生的是REST风格  导入依赖  创建配置类 12345678910111213141516171819202122@Bean public Docket webApiConfig()&amp;#123;        return new Docket(DocumentationType.SWAGGER_2)             .g">
+<meta property="og:description" content="介绍Jwt全称是JSON Web Tokens  使用json的形式作为web应用中的令牌，将需要传输的信息(比如用户名和密码)作为json对象进行传输，在传输过程中还可以进行加密、认证授权操作。  应用场景 授权  最常用的场景。用户登录过后，以后的客户端请求中都会包含JWT数据，一方面不用每次都输入账号和密码，另一方面允许用户访问令牌中允许的路由、服务和资源。常用的单点登录就是使用JWT的">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20211225152914244.png">
-<meta property="og:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20211225153638827.png">
-<meta property="article:published_time" content="2021-12-24T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-02-28T11:16:18.844Z">
+<meta property="og:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20220228222853130.png">
+<meta property="og:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20220301135506905.png">
+<meta property="og:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20220301135534901.png">
+<meta property="og:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20220301155122122.png">
+<meta property="og:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20220301155153356.png">
+<meta property="article:published_time" content="2022-02-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-03-03T06:04:19.103Z">
 <meta property="article:author" content="MHY">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20211225152914244.png">
+<meta name="twitter:image" content="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20220228222853130.png">
   
-  <title>Swagger - MHY</title>
+  <title>JWT - MHY</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -177,7 +180,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Swagger">
+            <span class="h2" id="subtitle" title="JWT">
               
             </span>
 
@@ -187,8 +190,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-12-25 00:00" pubdate>
-        2021年12月25日 凌晨
+      <time datetime="2022-02-28 00:00" pubdate>
+        2022年2月28日 凌晨
       </time>
     </span>
   
@@ -198,7 +201,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      812 字
+      1.4k 字
     </span>
   
 
@@ -207,7 +210,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      3 分钟
+      4 分钟
     </span>
   
 
@@ -236,33 +239,99 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Swagger</h1>
+            <h1 style="display: none">JWT</h1>
             
             <div class="markdown-body">
-              <h2 id="Swagger"><a href="#Swagger" class="headerlink" title="Swagger"></a>Swagger</h2><p>用来生成后端在线接口文档，方便后端对接口进行测试。产生的是REST风格</p>
-<ol>
-<li><p>导入依赖</p>
-</li>
-<li><p>创建配置类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Bean</span><br> <span class="hljs-function"><span class="hljs-keyword">public</span> Docket <span class="hljs-title">webApiConfig</span><span class="hljs-params">()</span></span>&#123;<br>   <br>     <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Docket(DocumentationType.SWAGGER_2)<br>             .groupName(<span class="hljs-string">&quot;webApi&quot;</span>)<br>             .apiInfo(webApiInfo())<br>             .select()<br>             .paths(Predicates.not(PathSelectors.regex(<span class="hljs-string">&quot;/admin/.*&quot;</span>)))<br>             .paths(Predicates.not(PathSelectors.regex(<span class="hljs-string">&quot;/error.*&quot;</span>)))<br>             .build();<br>   <br> &#125;<br> <br> <span class="hljs-function"><span class="hljs-keyword">private</span> ApiInfo <span class="hljs-title">webApiInfo</span><span class="hljs-params">()</span></span>&#123;<br>   <br>     <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ApiInfoBuilder()<br>             .title(<span class="hljs-string">&quot;网站-课程中心API文档&quot;</span>)<br>             .description(<span class="hljs-string">&quot;本文档描述了课程中心微服务接口定义&quot;</span>)<br>             .version(<span class="hljs-string">&quot;1.0&quot;</span>)<br>             .contact(<span class="hljs-keyword">new</span> Contact(<span class="hljs-string">&quot;Helen&quot;</span>, <span class="hljs-string">&quot;http://atguigu.com&quot;</span>, <span class="hljs-string">&quot;55317332@qq.com&quot;</span>))<br>             .build();<br> &#125;<br></code></pre></td></tr></table></figure>
+              <span id="more"></span>
 
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Jwt全称是<strong>JSON Web Tokens</strong></p>
 <blockquote>
-<p>在配置类中加入以下方法，根据需要进行修改即可</p>
-<p>注意，要将此类加在配置类中，并且可以交给spring管理</p>
+<p>使用json的形式作为web应用中的令牌，将需要传输的信息(比如用户名和密码)作为json对象进行传输，在传输过程中还可以进行加密、认证授权操作。</p>
+</blockquote>
+<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><ol>
+<li><p>授权</p>
+<blockquote>
+<p>最常用的场景。用户登录过后，以后的客户端请求中都会包含JWT数据，一方面不用每次都输入账号和密码，另一方面允许用户访问令牌中允许的路由、服务和资源。常用的单点登录就是使用JWT的一项功能。可以实现跨域。</p>
 </blockquote>
 </li>
-<li><p>最后运行boot启动类，在浏览器中输入swagger访问路径即可</p>
+<li><p>交换信息</p>
 <blockquote>
-<p>访问路径 地址：端口号/swagger-ui.html</p>
-<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20211225152914244.png" srcset="/img/loading.gif" lazyload alt="image-20211225152914244"></p>
+<p>JWT可以进行签名，发送客户端和服务器之间发送一次请求后，会使用算法产生一个签名。即使遭到篡改，但签名是通过算法进行记录的，更改后会有很大的改变，服务器和客户端都会验证第一次生成的签名，所以使用签名可以验证是否遭到篡改。</p>
 </blockquote>
 </li>
 </ol>
-<p>定义在类上：@Api</p>
-<p>定义在方法上：@ApiOperation</p>
-<p>定义在参数上：@ApiParam</p>
-<p>用来说明接口作用，自定义信息</p>
-<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20211225153638827.png" srcset="/img/loading.gif" lazyload alt="image-20211225153638827"></p>
+<h2 id="JWT和session的区别"><a href="#JWT和session的区别" class="headerlink" title="JWT和session的区别"></a>JWT和session的区别</h2><p><strong>对jwt、session认证之间的区别还是不太清楚</strong>，都是个人的理解</p>
+<blockquote>
+<p>用户登录成功后，服务器会生成一个sessionId返回给客户端，session保存到服务器的内存中。session的过期时间等其他可以自由设置。<br>客户端再次发送请求就会携带sessionId去和服务器内存中的sessionid进行比较，如果存在则通过。<br>如果是集群，存在服务器中的sessionid要进行集群中的共享，加大了内存的占用。</p>
+</blockquote>
+<blockquote>
+<p>JWT是用户登录成功，服务器会生成一个token，将token返回给客户端并保存到客户端中。客户端之后再次访问会将JWT放在请求头中，同时解决了伪造跨域攻击，后端验证token是否存在、过期等，并返回相应的结果。</p>
+</blockquote>
+<h2 id="JWT结构"><a href="#JWT结构" class="headerlink" title="JWT结构"></a>JWT结构</h2><p><strong>是一个字符串，由三部分组成：</strong></p>
+<blockquote>
+<p>组成样式例如: xxx.xxx.xxx，三部分之间由.隔开</p>
+</blockquote>
+<ol>
+<li><p>标头(Header)</p>
+<blockquote>
+<p>由令牌的类型(typ：)和使用的签名算法(alg：)组成。</p>
+<p>{</p>
+<p>  “alg”: “HS256”,</p>
+<p>​    “typ”:”JWT”</p>
+<p>}</p>
+<p>上边JSON形式的数据会经过Base64进行编码，变成一段字符串，生成的字符串成为结构中的第一部分标头。<br>经过Base64编码之后的字符串还可以使用Base64解码变成最初的样子。</p>
+</blockquote>
+</li>
+<li><p>有效载荷(PayLoad)</p>
+<blockquote>
+<p>简单来说就是用来存放用户登录之后的信息，比如指定用户名、密码、权限等。</p>
+<p>{</p>
+<p>​    “name”:”mason”,</p>
+<p>​    “admin”:true</p>
+<p>}</p>
+<p>同样这部分数据也是使用Base64进行编码，同样可以解码，所以<strong>不要把敏感的信息放进去，比如密码</strong></p>
+</blockquote>
+</li>
+<li><p>签名(Signature)</p>
+<blockquote>
+<p>这部分是由<strong>标头</strong>和<strong>载荷</strong>以及<strong>自定义签名</strong>组成的。自定义的签名很重要，不要泄露。<br>自定义的签名是根据标头中设置的加密算法进行加密处理生成的。</p>
+</blockquote>
+</li>
+</ol>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20220228222853130.png" srcset="/img/loading.gif" lazyload alt="image-20220228222853130"></p>
+<h2 id="使用JWT"><a href="#使用JWT" class="headerlink" title="使用JWT"></a>使用JWT</h2><p><strong>创建</strong></p>
+<blockquote>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20220301135506905.png" srcset="/img/loading.gif" lazyload alt="image-20220301135506905"></p>
+</blockquote>
+<p><strong>验证</strong></p>
+<blockquote>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20220301135534901.png" srcset="/img/loading.gif" lazyload alt="image-20220301135534901"></p>
+</blockquote>
+<h2 id="封装成工具类"><a href="#封装成工具类" class="headerlink" title="封装成工具类"></a>封装成工具类</h2><p>简单的做一下封装，和上边使用JWT没有什么太大的区别。</p>
+<p>细节问题比如判断token是否为空等，根据需要在写</p>
+<ul>
+<li><p>生成token</p>
+<blockquote>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20220301155122122.png" srcset="/img/loading.gif" lazyload alt="image-20220301155122122"></p>
+</blockquote>
+</li>
+<li><p>验证(并返回对象)</p>
+<blockquote>
+<p><img src="https://gitee.com/myyyhyyy/blogimg/raw/master/img/image-20220301155153356.png" srcset="/img/loading.gif" lazyload></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="整合spring-boot"><a href="#整合spring-boot" class="headerlink" title="整合spring boot"></a>整合spring boot</h2><p><strong>整体思路</strong></p>
+<ol>
+<li>数据库中新建一张用户表，存放用户名和密码</li>
+<li>编写entity、mapper、service等</li>
+<li>在接口中接收传递过来的用户名和密码，并从数据库中查询验证是否存在</li>
+<li>和数据库中的数据匹配通过，则调用jwt工具类，将用户的信息传递进去(比如用户名)，最后会生成一个token并返回</li>
+<li>前端接受到token进行保存，以后每次访问后端时都会将token放在请求头中</li>
+<li>后端接受请求，并从请求头中获取token进行解码比较，成功则相应请求，否则反之。</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>还是需要和其他技术配合起来使用</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1i54y1m7cP?p=6&spm_id_from=333.1007.top_right_bar_window_history.content.click">JWT</a></p>
 
             </div>
             <hr>
@@ -283,9 +352,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/02/28/JWT/">
+                      <a href="/2022/02/28/Vue-cli/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">JWT</span>
+                        <span class="hidden-mobile">Vue cli</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -293,8 +362,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/12/24/MP/">
-                        <span class="hidden-mobile">Mybatis-plus</span>
+                      <a href="/2021/12/25/Swagger/">
+                        <span class="hidden-mobile">Swagger</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
